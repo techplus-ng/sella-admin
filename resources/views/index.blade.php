@@ -109,6 +109,9 @@
 			</h5>
 			<nav class="my-2 my-md-0 mr-md-3">
 				<a class="p-2 text-dark" href="{{url('contact')}}">Contact Us</a>
+				@if(Auth::check())
+					<a class="p-2 text-dark" href="{{url('dashboard')}}">Dashboard</a>
+				@endif
 			</nav>
 		</div>
 
