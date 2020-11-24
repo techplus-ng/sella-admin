@@ -176,11 +176,11 @@
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     {{-- <script src="{{asset('https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js')}}"></script> --}}
     {{-- <script src="{{asset('https://www.gstatic.com/firebasejs/7.2.0/firebase-messaging.js')}}"></script> --}}
-    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
-
+    {{-- <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script> --}}
+    {{-- <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script> --}}
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-messaging.js"></script>
     <script type="text/javascript">@include('vendor.notifications.init_firebase')</script>
-
     <script type="text/javascript">
         const messaging = firebase.messaging();
         navigator.serviceWorker.register("{{url('firebase/sw-js')}}")
