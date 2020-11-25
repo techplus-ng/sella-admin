@@ -155,12 +155,12 @@
 							<div class="left-badge px-4 py-4 mt-5">
 								<h2 class="py-2">
 									Re-stock 
-									your store
+									your shop
 									with sella
 								</h2>
 
 								<p class="py-2">
-									Get products delivered to your store directly 
+									Get products delivered to your shop directly 
 									at best prices from top FMCG brands.
 								</p>
 
