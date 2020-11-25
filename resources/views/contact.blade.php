@@ -13,7 +13,7 @@
 	    <meta property="og:image" content="{{asset('images/sella-img.png')}}"/>
 	    <meta property="og:url" content="{{ Request::url() }}"/>
 	    <meta property="og:site_name" content="Sella"/>
-	    <meta property="og:type" content="eCommerce"/>
+	    <meta property="og:type" content="article"/>
 	    <meta property="og:description" content="Sella helps you to re-stock your shop at the best prices. You can order for the products you sell from the comfort of your shop and you get the stock in 24 hours."/>
 
 	    {{-- Twitter Section --}}
