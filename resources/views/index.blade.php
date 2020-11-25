@@ -6,7 +6,22 @@
 		<meta name="description" content="Sella helps you to re-stock your shop at the best prices. You can order for the products you sell from the comfort of your shop and you get the stock in 24 hours.">
 		<meta name="author" content="Sella">
 		<meta name="generator" content="Jekyll v4.1.1">
+		<meta name="keywords" content="Shopping, eCommerce, Stores, Foods, Groceries, Health, PZ, Promasidor, Shops, Retails, Headlines, Technology, Twitter, Google, Facebook, Youtube" />
 		<title>Sella</title>
+
+	    <meta property="fb:app_id" content="408694093597122" />
+	    <meta property="og:title" content="Get Sella"/>
+	    <meta property="og:image" content="{{asset('images/sella-img.png')}}"/>
+	    <meta property="og:url" content="{{ Request::url() }}"/>
+	    <meta property="og:site_name" content="Sella"/>
+	    <meta property="og:type" content="eCommerce"/>
+	    <meta property="og:description" content="Sella helps you to re-stock your shop at the best prices. You can order for the products you sell from the comfort of your shop and you get the stock in 24 hours."/>
+
+	    {{-- Twitter Section --}}
+	    <meta name="twitter:title" content="Get Sella" />
+	    <meta name="twitter:image" content="{{asset('images/sella-img.png')}}" />
+	    <meta name="twitter:url" content="{{env("APP_URL")}}" />
+	    <meta name="twitter:card" content="Sella helps you to re-stock your shop at the best prices. You can order for the products you sell from the comfort of your shop and you get the stock in 24 hours." />
 		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
 		<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
