@@ -17,8 +17,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'ExternalPageController@index');
-Route::get('/contact', 'ExternalPageController@contact');
+Route::get('/',                 'ExternalPageController@index');
+Route::get('/contact',          'ExternalPageController@contact');
+Route::get('/privacy/policy',   'ExternalPageController@privacyPolicy')->name('privacy_policy');
+Route::get('/terms/conditions', 'ExternalPageController@termsConditions')->name('terms_conditions');
 
 Route::get('login/{service}', 'Auth\LoginController@redirectToProvider');
 Route::get('login/{service}/callback', 'Auth\LoginController@handleProviderCallback');

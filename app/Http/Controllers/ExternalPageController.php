@@ -26,4 +26,24 @@ class ExternalPageController extends Controller
     	// body
     	return view('contact');
     }
+
+    /*
+    |-----------------------------------------
+    | TOP POLICY CHARTS
+    |-----------------------------------------
+    */
+    public function privacyPolicy(){
+        // body
+        return view('privacy-policy');
+    }
+
+    /*
+    |-----------------------------------------
+    | TOP TERMS CHARTS
+    |-----------------------------------------
+    */
+    public function termsConditions(){
+        // body
+        return view('terms-conditions');
+    }
 }
