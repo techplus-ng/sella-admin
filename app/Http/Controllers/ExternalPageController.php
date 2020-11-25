@@ -32,7 +32,7 @@ class ExternalPageController extends Controller
     | TOP POLICY CHARTS
     |-----------------------------------------
     */
-    public function privacyPolicy(){
+    public function privacyPolicy(Request $request){
         // body
         return view('privacy-policy');
     }
@@ -42,8 +42,24 @@ class ExternalPageController extends Controller
     | TOP TERMS CHARTS
     |-----------------------------------------
     */
-    public function termsConditions(){
+    public function termsConditions(Request $request){
         // body
         return view('terms-conditions');
+    }
+
+    /*
+    |-----------------------------------------
+    | FB CALLBACK 
+    |-----------------------------------------
+    */
+    public function facebookCallback(Request $request){
+        // body
+        $data = [
+            "status"    => "success",
+            "message"   => "successful!"
+        ];
+
+        // return.
+        return response()->json($data, 200);
     }
 }
