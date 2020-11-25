@@ -60,6 +60,6 @@ class ExternalPageController extends Controller
         ];
 
         // return.
-        return response()->json($data, 200);
+        return response()->json($data);
     }
 }
