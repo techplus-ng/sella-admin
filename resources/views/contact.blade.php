@@ -202,6 +202,11 @@
 					display: inline-block !important;
 				}
 			}
+
+			.google-play-link {
+				position: relative;
+				z-index: 999;
+			}
 		</style>
 	</head>
 	<body>
@@ -237,7 +242,7 @@
 									</a>
 								</p>
 
-								<a href="javascript:void(0);" onclick="toPlayStore()" class="py-5">
+								<a href="https://play.google.com/store/apps/details?id=com.getsella.client" target="_blank" class="py-5 google-play-link">
 									<img src="{{asset('images/googleplaystore.png')}}">
 								</a>
 							</div>
