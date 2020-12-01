@@ -263,5 +263,11 @@
 				</div>
 			</div>
 		</div>
+
+		<script type="text/javascript">
+			function toPlayStore() {
+				window.location.href = "https://play.google.com/store/apps/details?id=com.getsella.client";
+			}
+		</script>
 	</body>
 </html>
