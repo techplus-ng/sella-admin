@@ -41,6 +41,12 @@ Route::get('firebase/sw-js','AppSettingController@initFirebase');
 
 Route::get('storage/app/public/{id}/{conversion}/{filename?}', 'UploadController@storage');
 Route::middleware('auth')->group(function () {
+
+    Route::get('reports',  'ReportController@index');
+    Route::get('reports/clusters',  'ReportController@clusters');
+    Route::get('reports/orders',    'ReportController@orders');
+    Route::get('reports/transactions',  'ReportController@transactions');
+
     Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 

@@ -174,7 +174,7 @@
 								</a>
 
 								<p class="py-4">
-									2020 Xordium Ltd. <span class="text-danger">Privacy Policy</span>
+									{{ date("Y") }} Xordium Ltd. <span class="text-danger">Privacy Policy</span>
 								</p>
 							</div>
 						</div>

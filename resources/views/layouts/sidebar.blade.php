@@ -12,6 +12,34 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 @include('layouts.menu',['icons'=>true])
+
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-archive"></i>
+                        <p>Reports 
+                            <i class="right fa fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{url('reports/clusters')}}">
+                                <i class="nav-icon fa fa-archive"></i>
+                                <p>Reports by Cluster</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{url('reports/orders')}}">
+                                <i class="nav-icon fa fa-plus-square"></i>
+                                <p>Highest Ordered Products</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{url('reports/transactions')}}">
+                                <i class="nav-icon fa fa-plus-square-o"></i><p>All Transactions</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
