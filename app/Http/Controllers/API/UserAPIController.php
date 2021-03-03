@@ -44,9 +44,10 @@ class UserAPIController extends Controller
     {
         try {
             $this->validate($request, [
-                'email' => 'required|email',
+                // 'email' => 'required|email',
                 'password' => 'required',
             ]);
+
             if (auth()->attempt(['email' => $request->input('email'), 'password' => $request->input('password')])) {
                 // Authentication passed...
                 $user = auth()->user();
@@ -68,6 +69,15 @@ class UserAPIController extends Controller
      */
     function register(Request $request)
     {
+        if($request->has('mobile_phone') && !empty($request->mobile_phone)){
+            $mobile_email = $request->mobile_phone.'@getsella.com';
+            $email = $mobile_email;
+            $mobile_phone = $request->mobile_phone;
+        }else{
+            $email = $request->input('email');
+            $mobile_phone = '';
+        }
+
         try {
             $this->validate($request, [
                 'name' => 'required',
@@ -76,7 +86,8 @@ class UserAPIController extends Controller
             ]);
             $user = new User;
             $user->name = $request->input('name');
-            $user->email = $request->input('email');
+            $user->phone_number = $mobile_phone;
+            $user->email = $email;
             $user->device_token = $request->input('device_token', '');
             $user->password = Hash::make($request->input('password'));
             $user->api_token = str_random(60);

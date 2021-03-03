@@ -1,12 +1,12 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => 'No version set (parsed as 1.0.0)',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '8631b6bacbd25a7a16cadb16a38709878630accf',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -509,12 +509,12 @@
     ),
     'laravel/laravel' => 
     array (
-      'pretty_version' => 'No version set (parsed as 1.0.0)',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '8631b6bacbd25a7a16cadb16a38709878630accf',
     ),
     'laravel/socialite' => 
     array (
