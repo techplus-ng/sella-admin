@@ -138,7 +138,7 @@ function getPayment($column, $attributeName)
  * @param string $titleAttribute
  * @return string
  */
-function getLinksColumn($array = [], $baseUrl, $idAttribute = 'id', $titleAttribute = 'title')
+function getLinksColumn($array = [], $baseUrl = '', $idAttribute = 'id', $titleAttribute = 'title')
 {
     $html = '<a href="${href}" class="text-bold text-dark">${title}</a>';
     $result = [];
@@ -157,7 +157,7 @@ function getLinksColumn($array = [], $baseUrl, $idAttribute = 'id', $titleAttrib
  * @param string $titleAttribute
  * @return string
  */
-function getLinksColumnByRouteName($array = [], $routeName, $idAttribute = 'id', $titleAttribute = 'title')
+function getLinksColumnByRouteName($array = [], $routeName = '', $idAttribute = 'id', $titleAttribute = 'title')
 {
     $html = '<a href="${href}" class="text-bold text-dark">${title}</a>';
     $result = [];
