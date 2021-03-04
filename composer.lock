@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dad989b20bd25babd2109ebf1fb947f0",
+    "content-hash": "a29986c97bfd5fc580eeeaed1eeb4b25",
     "packages": [
         {
             "name": "anlutro/l4-settings",
@@ -3663,21 +3663,25 @@
         },
         {
             "name": "rap2hpoutre/laravel-log-viewer",
-            "version": "v0.15.0",
+            "version": "v1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rap2hpoutre/laravel-log-viewer.git",
-                "reference": "4a594fea854a2eb67e89324bcb6879d55f870e64"
+                "reference": "27392d29234b6ff38a456454558f4bcc40cc837a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rap2hpoutre/laravel-log-viewer/zipball/4a594fea854a2eb67e89324bcb6879d55f870e64",
-                "reference": "4a594fea854a2eb67e89324bcb6879d55f870e64",
+                "url": "https://api.github.com/repos/rap2hpoutre/laravel-log-viewer/zipball/27392d29234b6ff38a456454558f4bcc40cc837a",
+                "reference": "27392d29234b6ff38a456454558f4bcc40cc837a",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "4.2.*|5.*",
+                "illuminate/support": "4.2.*|5.*|^6.0|^7.0|^8.0",
                 "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "3.7.*",
+                "phpunit/phpunit": "^7"
             },
             "type": "laravel-package",
             "extra": {
@@ -3714,7 +3718,11 @@
                 "logging",
                 "lumen"
             ],
-            "time": "2018-06-10T10:02:20+00:00"
+            "support": {
+                "issues": "https://github.com/rap2hpoutre/laravel-log-viewer/issues",
+                "source": "https://github.com/rap2hpoutre/laravel-log-viewer/tree/master"
+            },
+            "time": "2020-09-08T12:21:27+00:00"
         },
         {
             "name": "razorpay/razorpay",
@@ -8320,10 +8328,10 @@
     ],
     "aliases": [
         {
-            "alias": "1.39.0",
-            "alias_normalized": "1.39.0.0",
+            "package": "nesbot/carbon",
             "version": "2.31.0.0",
-            "package": "nesbot/carbon"
+            "alias": "1.39.0",
+            "alias_normalized": "1.39.0.0"
         }
     ],
     "minimum-stability": "dev",
@@ -8339,5 +8347,6 @@
         "ext-curl": "*",
         "ext-json": "*"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
 }
