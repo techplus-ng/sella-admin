@@ -90,8 +90,8 @@ return array(
     '4a1f389d6ce373bda9e57857d3b61c84' => $vendorDir . '/barryvdh/laravel-debugbar/src/helpers.php',
     'fe3b74234e1140ee7cfd9cc2d4c2e566' => $vendorDir . '/kylekatarnls/laravel-carbon-2/src/Carbon.php',
     'f960e77410032f236cef8c56617b313e' => $vendorDir . '/overtrue/laravel-lang/src/helpers.php',
+    '377b22b161c09ed6e5152de788ca020a' => $vendorDir . '/spatie/laravel-permission/src/helpers.php',
     '6e160bf059fb4b8bc098a661ce025ab6' => $vendorDir . '/smartervision/laravel-generator/src/helpers.php',
     '5fed86d958f60fbaf53e3f4f2d8a41a2' => $vendorDir . '/smartervision/laravel-installer/src/Helpers/functions.php',
-    '377b22b161c09ed6e5152de788ca020a' => $vendorDir . '/spatie/laravel-permission/src/helpers.php',
     'd21d43db5f6e840ee7b10744ec7fdf66' => $baseDir . '/app/Helpers/helpers.php',
 );
