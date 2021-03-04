@@ -48,7 +48,14 @@ class UserAPIController extends Controller
                 'password' => 'required',
             ]);
 
-            if (auth()->attempt(['email' => $request->input('email'), 'password' => $request->input('password')])) {
+            $email = $request->input('email');
+            $password = $request->input('password');
+
+            if(!preg_match("/@/i", $email)){
+                $email = $email.'@getsella.com';
+            }
+
+            if (auth()->attempt(['email' => $email, 'password' => $password])) {
                 // Authentication passed...
                 $user = auth()->user();
                 $user->device_token = $request->input('device_token', '');
