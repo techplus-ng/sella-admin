@@ -5070,24 +5070,28 @@
         },
         {
             "name": "rap2hpoutre/laravel-log-viewer",
-            "version": "v0.15.0",
-            "version_normalized": "0.15.0.0",
+            "version": "v1.7.0",
+            "version_normalized": "1.7.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rap2hpoutre/laravel-log-viewer.git",
-                "reference": "4a594fea854a2eb67e89324bcb6879d55f870e64"
+                "reference": "27392d29234b6ff38a456454558f4bcc40cc837a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rap2hpoutre/laravel-log-viewer/zipball/4a594fea854a2eb67e89324bcb6879d55f870e64",
-                "reference": "4a594fea854a2eb67e89324bcb6879d55f870e64",
+                "url": "https://api.github.com/repos/rap2hpoutre/laravel-log-viewer/zipball/27392d29234b6ff38a456454558f4bcc40cc837a",
+                "reference": "27392d29234b6ff38a456454558f4bcc40cc837a",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "4.2.*|5.*",
+                "illuminate/support": "4.2.*|5.*|^6.0|^7.0|^8.0",
                 "php": ">=5.4.0"
             },
-            "time": "2018-06-10T10:02:20+00:00",
+            "require-dev": {
+                "orchestra/testbench": "3.7.*",
+                "phpunit/phpunit": "^7"
+            },
+            "time": "2020-09-08T12:21:27+00:00",
             "type": "laravel-package",
             "extra": {
                 "laravel": {
@@ -5124,6 +5128,10 @@
                 "logging",
                 "lumen"
             ],
+            "support": {
+                "issues": "https://github.com/rap2hpoutre/laravel-log-viewer/issues",
+                "source": "https://github.com/rap2hpoutre/laravel-log-viewer/tree/master"
+            },
             "install-path": "../rap2hpoutre/laravel-log-viewer"
         },
         {
@@ -8733,41 +8741,5 @@
             "install-path": "../yajra/laravel-datatables-oracle"
         }
     ],
-    "dev": true,
-    "dev-package-names": [
-        "barryvdh/laravel-debugbar",
-        "doctrine/instantiator",
-        "filp/whoops",
-        "fzaninotto/faker",
-        "hamcrest/hamcrest-php",
-        "maximebf/debugbar",
-        "mockery/mockery",
-        "myclabs/deep-copy",
-        "nunomaduro/collision",
-        "phar-io/manifest",
-        "phar-io/version",
-        "phpdocumentor/reflection-common",
-        "phpdocumentor/reflection-docblock",
-        "phpdocumentor/type-resolver",
-        "phpspec/prophecy",
-        "phpunit/php-code-coverage",
-        "phpunit/php-file-iterator",
-        "phpunit/php-text-template",
-        "phpunit/php-timer",
-        "phpunit/php-token-stream",
-        "phpunit/phpunit",
-        "sebastian/code-unit-reverse-lookup",
-        "sebastian/comparator",
-        "sebastian/diff",
-        "sebastian/environment",
-        "sebastian/exporter",
-        "sebastian/global-state",
-        "sebastian/object-enumerator",
-        "sebastian/object-reflector",
-        "sebastian/recursion-context",
-        "sebastian/resource-operations",
-        "sebastian/version",
-        "theseer/tokenizer",
-        "webmozart/assert"
-    ]
+    "dev": true
 }

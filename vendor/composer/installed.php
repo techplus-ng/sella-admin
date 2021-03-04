@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '8631b6bacbd25a7a16cadb16a38709878630accf',
+    'reference' => 'd8aa9a07d008ebcab0976021ceaf7e29606f1299',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -514,7 +514,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '8631b6bacbd25a7a16cadb16a38709878630accf',
+      'reference' => 'd8aa9a07d008ebcab0976021ceaf7e29606f1299',
     ),
     'laravel/socialite' => 
     array (
@@ -995,12 +995,12 @@
     ),
     'rap2hpoutre/laravel-log-viewer' => 
     array (
-      'pretty_version' => 'v0.15.0',
-      'version' => '0.15.0.0',
+      'pretty_version' => 'v1.7.0',
+      'version' => '1.7.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '4a594fea854a2eb67e89324bcb6879d55f870e64',
+      'reference' => '27392d29234b6ff38a456454558f4bcc40cc837a',
     ),
     'razorpay/razorpay' => 
     array (

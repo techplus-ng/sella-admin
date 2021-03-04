@@ -1,11 +1,5 @@
 <?php
-/**
- * File name: web.php
- * Last modified: 2020.06.07 at 07:02:57
- * Author: SmarterVision - https://codecanyon.net/user/smartervision
- * Copyright (c) 2020
- *
- */
+Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 
 /*
 |--------------------------------------------------------------------------
