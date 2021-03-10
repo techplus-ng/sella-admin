@@ -30,6 +30,16 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{!! url('settings/payment/paystack') !!}">
+                        <i class="fa fa-envelope-o mr-2"></i>
+                        {{-- {{trans('lang.app_setting_stripe')}} --}}
+                        {{-- @if(setting('enable_stripe',false)) --}}
+                        Paystack
+                        <span class="badge ml-2 badge-success">Active</span>
+                        {{-- @endif --}}
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="{!! url('settings/payment/razorpay') !!}"><i class="fa fa-envelope-o mr-2"></i>{{trans('lang.app_setting_razorpay')}}@if(setting('enable_razorpay',false))<span class="badge ml-2 badge-success">{{trans('lang.active')}}</span>@endif
                     </a>
                 </li>

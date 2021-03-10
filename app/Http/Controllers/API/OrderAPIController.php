@@ -208,6 +208,57 @@ class OrderAPIController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse|mixed
      */
+    private function paystackPayment(Request $request)
+    {
+        $input = $request->all();
+        $amount = 0;
+        try {
+            $user = $this->userRepository->findWithoutFail($input['user_id']);
+            if (empty($user)) {
+                return $this->sendError('User not found');
+            }
+            if (empty($input['delivery_address_id'])) {
+                $order = $this->orderRepository->create(
+                    $request->only('user_id', 'order_status_id', 'tax', 'hint')
+                );
+            } else {
+                $order = $this->orderRepository->create(
+                    $request->only('user_id', 'order_status_id', 'tax', 'delivery_address_id', 'delivery_fee', 'hint')
+                );
+            }
+            foreach ($input['products'] as $productOrder) {
+                $productOrder['order_id'] = $order->id;
+                $amount += $productOrder['price'] * $productOrder['quantity'];
+                $this->productOrderRepository->create($productOrder);
+            }
+            $amount += $order->delivery_fee;
+            $amountWithTax = $amount + ($amount * $order->tax / 100);
+
+            $payment = $this->paymentRepository->create([
+                "user_id" => $input['user_id'],
+                "description" => trans("lang.payment_order_done"),
+                "price" => $amountWithTax,
+                "status" => "Paid", // $charge->status
+                "method" => $input['payment']['method'],
+            ]);
+            
+            $this->orderRepository->update(['payment_id' => $payment->id], $order->id);
+
+            $this->cartRepository->deleteWhere(['user_id' => $order->user_id]);
+
+            Notification::send($order->productOrders[0]->product->market->users, new NewOrder($order));
+
+        } catch (ValidatorException $e) {
+            return $this->sendError($e->getMessage());
+        }
+
+        return $this->sendResponse($order->toArray(), __('lang.saved_successfully', ['operator' => __('lang.order')]));
+    }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse|mixed
+     */
     private function cashPayment(Request $request)
     {
         $input = $request->all();

@@ -35,9 +35,9 @@ function getMediaColumn($mediaModel, $mediaCollectionName = '', $optionClass = '
     $optionClass = $optionClass == '' ? ' rounded ' : $optionClass;
 
     if ($mediaModel->hasMedia($mediaCollectionName)) {
-        return "<img class='" . $optionClass . "' style='width:50px' src='" . $mediaModel->getFirstMediaUrl($mediaCollectionName, $mediaThumbnail) . "' alt='" . $mediaModel->getFirstMedia($mediaCollectionName)->name . "'>";
+        return "<img class='".$optionClass."' style='width:50px' src='".$mediaModel->getFirstMediaUrl($mediaCollectionName, $mediaThumbnail)."' alt='".$mediaModel->getFirstMedia($mediaCollectionName)->name."' onerror='this.onerror=null;this.src=`https://via.placeholder.com/468x60?text=No+Image`;'>";
     }else{
-        return "<img class='" . $optionClass . "' style='width:50px' src='" . asset('images/image_default.png') . "' alt='image_default'>";
+        return "<img class='".$optionClass."' style='width:50px' src='".asset('images/image_default.png')."' alt='image_default' onerror='this.onerror=null;this.src=`https://via.placeholder.com/468x60?text=No+Image`;'>";
     }
 }
 
