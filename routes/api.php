@@ -17,6 +17,8 @@
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::get('verify/paystack/reference', 'VerifyReferenceController@verify');
+Route::get('payments',  'PaymentListController@fetchAll');
 
 Route::prefix('driver')->group(function () {
     Route::post('login', 'API\Driver\UserAPIController@login');
@@ -54,7 +56,6 @@ Route::resource('products', 'API\ProductAPIController');
 Route::resource('galleries', 'API\GalleryAPIController');
 Route::resource('product_reviews', 'API\ProductReviewAPIController');
 
-
 Route::resource('faqs', 'API\FaqAPIController');
 Route::resource('market_reviews', 'API\MarketReviewAPIController');
 Route::resource('currencies', 'API\CurrencyAPIController');
@@ -63,10 +64,7 @@ Route::resource('slides', 'API\SlideAPIController')->except([
 ]);
 
 Route::resource('option_groups', 'API\OptionGroupAPIController');
-
 Route::resource('options', 'API\OptionAPIController');
-
-
 
 Route::middleware('auth:api')->group(function () {
     Route::group(['middleware' => ['role:driver']], function () {

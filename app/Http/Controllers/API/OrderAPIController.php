@@ -137,9 +137,10 @@ class OrderAPIController extends Controller
         if (isset($payment['payment']) && $payment['payment']['method']) {
             if ($payment['payment']['method'] == "Credit Card (Stripe Gateway)") {
                 return $this->stripPayment($request);
+            } elseif($payment['payment']['method'] == "Paystack") {
+                return $this->paystackPayment($request);
             } else {
                 return $this->cashPayment($request);
-
             }
         }
     }
@@ -210,6 +211,7 @@ class OrderAPIController extends Controller
      */
     private function paystackPayment(Request $request)
     {
+        // dd($request->all());
         $input = $request->all();
         $amount = 0;
         try {
@@ -217,6 +219,7 @@ class OrderAPIController extends Controller
             if (empty($user)) {
                 return $this->sendError('User not found');
             }
+
             if (empty($input['delivery_address_id'])) {
                 $order = $this->orderRepository->create(
                     $request->only('user_id', 'order_status_id', 'tax', 'hint')
@@ -226,6 +229,7 @@ class OrderAPIController extends Controller
                     $request->only('user_id', 'order_status_id', 'tax', 'delivery_address_id', 'delivery_fee', 'hint')
                 );
             }
+            
             foreach ($input['products'] as $productOrder) {
                 $productOrder['order_id'] = $order->id;
                 $amount += $productOrder['price'] * $productOrder['quantity'];
