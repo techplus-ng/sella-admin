@@ -120,8 +120,6 @@ class OrderAPIController extends Controller
         }
 
         return $this->sendResponse($order->toArray(), 'Order retrieved successfully');
-
-
     }
 
     /**
@@ -213,6 +211,18 @@ class OrderAPIController extends Controller
     {
         // dd($request->all());
         $input = $request->all();
+        $carts = $this->cartRepository->where('user_id', $request->user_id)->get();
+        $products = [];
+        foreach ($carts as $key => $value) {
+            $data = [
+                'price' => $value->product->price,
+                'quantity' => $value->quantity,
+                'product_id' => $value->product_id
+            ];
+
+            array_push($products, $data);
+        }
+        
         $amount = 0;
         try {
             $user = $this->userRepository->findWithoutFail($input['user_id']);
@@ -229,8 +239,8 @@ class OrderAPIController extends Controller
                     $request->only('user_id', 'order_status_id', 'tax', 'delivery_address_id', 'delivery_fee', 'hint')
                 );
             }
-            
-            foreach ($input['products'] as $productOrder) {
+
+            foreach ($products as $productOrder) {
                 $productOrder['order_id'] = $order->id;
                 $amount += $productOrder['price'] * $productOrder['quantity'];
                 $this->productOrderRepository->create($productOrder);
@@ -250,7 +260,7 @@ class OrderAPIController extends Controller
 
             $this->cartRepository->deleteWhere(['user_id' => $order->user_id]);
 
-            Notification::send($order->productOrders[0]->product->market->users, new NewOrder($order));
+            // Notification::send($order->productOrders[0]->product->market->users, new NewOrder($order));
 
         } catch (ValidatorException $e) {
             return $this->sendError($e->getMessage());
