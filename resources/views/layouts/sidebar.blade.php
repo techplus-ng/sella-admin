@@ -22,19 +22,19 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a class="nav-link " href="{{url('reports/clusters')}}">
+                            <a class="nav-link " href="reports/clusters">
                                 <i class="nav-icon fa fa-archive"></i>
                                 <p>Reports by Cluster</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="{{url('reports/orders')}}">
+                            <a class="nav-link " href="reports/orders">
                                 <i class="nav-icon fa fa-plus-square"></i>
                                 <p>Highest Ordered Products</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="{{url('reports/transactions')}}">
+                            <a class="nav-link " href="reports/transactions">
                                 <i class="nav-icon fa fa-plus-square-o"></i><p>All Transactions</p>
                             </a>
                         </li>

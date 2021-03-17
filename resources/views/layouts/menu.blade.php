@@ -1,6 +1,6 @@
 @can('dashboard')
     <li class="nav-item">
-        <a class="nav-link {{ Request::is('dashboard*') ? 'active' : '' }}" href="{!! url('dashboard') !!}">@if($icons)
+        <a class="nav-link {{ Request::is('dashboard*') ? 'active' : '' }}" href="dashboard">@if($icons)
                 <i class="nav-icon fa fa-dashboard"></i>@endif
             <p>{{trans('lang.dashboard')}}</p></a>
     </li>
@@ -173,7 +173,7 @@
 <li class="nav-header">{{trans('lang.app_setting')}}</li>
 @can('medias')
     <li class="nav-item">
-        <a class="nav-link {{ Request::is('medias*') ? 'active' : '' }}" href="{!! url('medias') !!}">@if($icons)<i class="nav-icon fa fa-picture-o"></i>@endif
+        <a class="nav-link {{ Request::is('medias*') ? 'active' : '' }}" href="medias">@if($icons)<i class="nav-icon fa fa-picture-o"></i>@endif
             <p>{{trans('lang.media_plural')}}</p></a>
     </li>
 @endcan
@@ -226,19 +226,19 @@
             </p></a>
         <ul class="nav nav-treeview">
             <li class="nav-item">
-                <a href="{!! url('settings/mobile/globals') !!}" class="nav-link {{  Request::is('settings/mobile/globals*') ? 'active' : '' }}">
+                <a href="settings/mobile/globals" class="nav-link {{  Request::is('settings/mobile/globals*') ? 'active' : '' }}">
                     @if($icons)<i class="nav-icon fa fa-cog"></i> @endif <p>{{trans('lang.app_setting_globals')}} <span class="right badge badge-danger">New</span> </p>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="{!! url('settings/mobile/colors') !!}" class="nav-link {{  Request::is('settings/mobile/colors*') ? 'active' : '' }}">
+                <a href="settings/mobile/colors" class="nav-link {{  Request::is('settings/mobile/colors*') ? 'active' : '' }}">
                     @if($icons)<i class="nav-icon fa fa-pencil"></i> @endif <p>{{trans('lang.mobile_colors')}} <span class="right badge badge-danger">New</span> </p>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="{!! url('settings/mobile/home') !!}" class="nav-link {{  Request::is('settings/mobile/home*') ? 'active' : '' }}">
+                <a href="settings/mobile/home" class="nav-link {{  Request::is('settings/mobile/home*') ? 'active' : '' }}">
                     @if($icons)<i class="nav-icon fa fa-home"></i> @endif <p>{{trans('lang.mobile_home')}}
                         <span class="right badge badge-danger">New</span></p>
                 </a>
@@ -265,7 +265,7 @@
         </a>
         <ul class="nav nav-treeview">
             <li class="nav-item">
-                <a href="{!! url('settings/app/globals') !!}" class="nav-link {{  Request::is('settings/app/globals*') ? 'active' : '' }}">
+                <a href="settings/app/globals" class="nav-link {{  Request::is('settings/app/globals*') ? 'active' : '' }}">
                     @if($icons)<i class="nav-icon fa fa-cog"></i> @endif <p>{{trans('lang.app_setting_globals')}}</p>
                 </a>
             </li>
@@ -321,11 +321,11 @@
 
 
             <li class="nav-item">
-                <a href="{!! url('settings/app/localisation') !!}" class="nav-link {{  Request::is('settings/app/localisation*') ? 'active' : '' }}">
+                <a href="settings/app/localisation" class="nav-link {{  Request::is('settings/app/localisation*') ? 'active' : '' }}">
                     @if($icons)<i class="nav-icon fa fa-language"></i> @endif <p>{{trans('lang.app_setting_localisation')}}</p></a>
             </li>
             <li class="nav-item">
-                <a href="{!! url('settings/translation/en') !!}" class="nav-link {{ Request::is('settings/translation*') ? 'active' : '' }}">
+                <a href="settings/translation/en" class="nav-link {{ Request::is('settings/translation*') ? 'active' : '' }}">
                     @if($icons) <i class="nav-icon fa fa-language"></i> @endif <p>{{trans('lang.app_setting_translation')}}</p></a>
             </li>
             @can('currencies.index')
@@ -335,26 +335,26 @@
             @endcan
 
             <li class="nav-item">
-                <a href="{!! url('settings/payment/payment') !!}" class="nav-link {{  Request::is('settings/payment*') ? 'active' : '' }}">
+                <a href="settings/payment/payment" class="nav-link {{  Request::is('settings/payment*') ? 'active' : '' }}">
                     @if($icons)<i class="nav-icon fa fa-credit-card"></i> @endif <p>{{trans('lang.app_setting_payment')}}</p>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="{!! url('settings/app/social') !!}" class="nav-link {{  Request::is('settings/app/social*') ? 'active' : '' }}">
+                <a href="settings/app/social" class="nav-link {{  Request::is('settings/app/social*') ? 'active' : '' }}">
                     @if($icons)<i class="nav-icon fa fa-globe"></i> @endif <p>{{trans('lang.app_setting_social')}}</p>
                 </a>
             </li>
 
 
             <li class="nav-item">
-                <a href="{!! url('settings/app/notifications') !!}" class="nav-link {{  Request::is('settings/app/notifications*') ? 'active' : '' }}">
+                <a href="settings/app/notifications" class="nav-link {{  Request::is('settings/app/notifications*') ? 'active' : '' }}">
                     @if($icons)<i class="nav-icon fa fa-bell"></i> @endif <p>{{trans('lang.app_setting_notifications')}}</p>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="{!! url('settings/mail/smtp') !!}" class="nav-link {{ Request::is('settings/mail*') ? 'active' : '' }}">
+                <a href="settings/mail/smtp" class="nav-link {{ Request::is('settings/mail*') ? 'active' : '' }}">
                     @if($icons)<i class="nav-icon fa fa-envelope"></i> @endif <p>{{trans('lang.app_setting_mail')}}</p>
                 </a>
             </li>
