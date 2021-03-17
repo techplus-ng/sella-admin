@@ -15,7 +15,7 @@
 
 	    <meta property="fb:app_id" content="408694093597122" />
 	    <meta property="og:title" content="Get Sella"/>
-	    <meta property="og:image" content="{{asset('images/sella-img.png')}}"/>
+	    <meta property="og:image" content="images/sella-img.png"/>
 	    <meta property="og:url" content="{{ Request::url() }}"/>
 	    <meta property="og:site_name" content="Sella"/>
 	    <meta property="og:type" content="article"/>
@@ -23,7 +23,7 @@
 
 	    {{-- Twitter Section --}}
 	    <meta name="twitter:title" content="Get Sella" />
-	    <meta name="twitter:image" content="{{asset('images/sella-img.png')}}" />
+	    <meta name="twitter:image" content="images/sella-img.png')}}" />
 	    <meta name="twitter:url" content="{{env("APP_URL")}}" />
 	    <meta name="twitter:card" content="Sella helps you to re-stock your shop at the best prices. You can order for the products you sell from the comfort of your shop and you get the stock in 24 hours." />
 		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
@@ -44,25 +44,25 @@
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 		<meta name="theme-color" content="#ffffff">
 
-		<link rel="shortcut icon" href="{{asset('image/favicon.png')}}" type="image/x-icon">
+		<link rel="shortcut icon" href="image/favicon.png" type="image/x-icon">
 		<!-- Bootstrap , fonts & icons  -->
-		<link rel="stylesheet" href="{{asset('assets/css/bootstrap.css')}}">
-		<link rel="stylesheet" href="{{asset('assets/fonts/icon-font/css/style.css')}}">
-		<link rel="stylesheet" href="{{asset('assets/fonts/typography-font/typo.css')}}">
-		<link rel="stylesheet" href="{{asset('assets/fonts/fontawesome-5/css/all.css')}}">
+		<link rel="stylesheet" href="assets/css/bootstrap.css">
+		<link rel="stylesheet" href="assets/fonts/icon-font/css/style.css">
+		<link rel="stylesheet" href="assets/fonts/typography-font/typo.css">
+		<link rel="stylesheet" href="assets/fonts/fontawesome-5/css/all.css">
 		<!-- Plugin'stylesheets  -->
-		<link rel="stylesheet" href="{{asset('assets/plugins/aos/aos.min.css')}}">
-		<link rel="stylesheet" href="{{asset('assets/plugins/fancybox/jquery.fancybox.min.css')}}">
-		<link rel="stylesheet" href="{{asset('assets/plugins/nice-select/nice-select.min.css')}}">
-		<link rel="stylesheet" href="{{asset('assets/plugins/slick/slick.min.css')}}">
+		<link rel="stylesheet" href="assets/plugins/aos/aos.min.css">
+		<link rel="stylesheet" href="assets/plugins/fancybox/jquery.fancybox.min.css">
+		<link rel="stylesheet" href="assets/plugins/nice-select/nice-select.min.css">
+		<link rel="stylesheet" href="assets/plugins/slick/slick.min.css">
 		<!-- Vendor stylesheets  -->
-		<link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
+		<link rel="stylesheet" href="assets/css/main.css">
 		<!-- Custom stylesheet -->
 	</head>
 	<body data-theme="light">
 	  <div class="site-wrapper overflow-hidden ">
 	    <div id="loading">
-	      <img src="{{asset('assets/image/preloader.gif')}}" alt="">
+	      <img src="assets/image/preloader.gif" alt="">
 	    </div>
 	    <!-- Header Area -->
 	    <!-- Header Area -->
@@ -72,9 +72,9 @@
 	          <!-- Brand Logo-->
 	          <div class="brand-logo mt-3 mt-md-0"><a href="https://getsella.com/">
 	              <!-- light version logo (logo must be black)-->
-	              <img src="{{asset('assets/image/sella-logo.png')}}" alt="" class="light-version-logo">
+	              <img src="assets/image/sella-logo.png')}}" alt="" class="light-version-logo">
 	              <!-- Dark version logo (logo must be White)-->
-	              <img src="{{asset('assets/image/logo-main-white.png')}}" alt="" class="dark-version-logo">
+	              <img src="assets/image/logo-main-white.png')}}" alt="" class="dark-version-logo">
 	            </a>
 	          </div>
 	          <div class="collapse navbar-collapse" id="mobile-menu">
@@ -519,15 +519,15 @@
 	    <!-- End Footer Area -->
 	  </div>
 	  <!-- Vendor Scripts -->
-	  <script src="{{asset('assets/js/vendor.min.js')}}"></script>
+	  <script src="assets/js/vendor.min.js"></script>
 	  <!-- Plugin's Scripts -->
-	  <script src="{{asset('assets/plugins/fancybox/jquery.fancybox.min.js')}}"></script>
-	  <script src="{{asset('assets/plugins/nice-select/jquery.nice-select.min.js')}}"></script>
-	  <script src="{{asset('assets/plugins/aos/aos.min.js')}}"></script>
-	  <script src="{{asset('assets/plugins/slick/slick.min.js')}}"></script>
-	  <script src="{{asset('assets/plugins/counter-up/jquery.counterup.min.js')}}"></script>
-	  <script src="{{asset('assets/plugins/counter-up/jquery.waypoints.min.js')}}"></script>
+	  <script src="assets/plugins/fancybox/jquery.fancybox.min.js"></script>
+	  <script src="assets/plugins/nice-select/jquery.nice-select.min.js"></script>
+	  <script src="assets/plugins/aos/aos.min.js"></script>
+	  <script src="assets/plugins/slick/slick.min.js"></script>
+	  <script src="assets/plugins/counter-up/jquery.counterup.min.js"></script>
+	  <script src="assets/plugins/counter-up/jquery.waypoints.min.js"></script>
 	  <!-- Activation Script -->
-	  <script src="{{asset('assets/js/custom.js')}}"></script>
+	  <script src="assets/js/custom.js"></script>
 	</body>
 </html>
