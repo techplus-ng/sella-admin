@@ -14,6 +14,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use Laravel\Cashier\Cashier;
 use Illuminate\Routing\UrlGenerator;
+use Illuminate\Support\Facades\URL;
 use Stripe\Stripe;
 
 class AppServiceProvider extends ServiceProvider
@@ -26,7 +27,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot(UrlGenerator $url)
     {
         if (env('APP_ENV') !== 'local') {
-            $url->forceScheme('https');
+            // $url->forceScheme('https');
+            URL::forceScheme('https');
         }
 
         Schema::defaultStringLength(191);
