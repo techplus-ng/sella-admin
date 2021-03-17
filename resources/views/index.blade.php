@@ -23,7 +23,7 @@
 
 	    {{-- Twitter Section --}}
 	    <meta name="twitter:title" content="Get Sella" />
-	    <meta name="twitter:image" content="images/sella-img.png')}}" />
+	    <meta name="twitter:image" content="images/sella-img.png" />
 	    <meta name="twitter:url" content="{{env("APP_URL")}}" />
 	    <meta name="twitter:card" content="Sella helps you to re-stock your shop at the best prices. You can order for the products you sell from the comfort of your shop and you get the stock in 24 hours." />
 		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
@@ -72,9 +72,9 @@
 	          <!-- Brand Logo-->
 	          <div class="brand-logo mt-3 mt-md-0"><a href="https://getsella.com/">
 	              <!-- light version logo (logo must be black)-->
-	              <img src="assets/image/sella-logo.png')}}" alt="" class="light-version-logo">
+	              <img src="assets/image/sella-logo.png" alt="" class="light-version-logo">
 	              <!-- Dark version logo (logo must be White)-->
-	              <img src="assets/image/logo-main-white.png')}}" alt="" class="dark-version-logo">
+	              <img src="assets/image/logo-main-white.png" alt="" class="dark-version-logo">
 	            </a>
 	          </div>
 	          <div class="collapse navbar-collapse" id="mobile-menu">
