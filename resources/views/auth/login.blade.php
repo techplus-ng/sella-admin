@@ -4,7 +4,7 @@
         <div class="card-body login-card-body">
             <p class="login-box-msg">{{__('auth.login_title')}}</p>
 
-            <form action="{{ url('/login') }}" method="post">
+            <form action="login" method="post">
                 {!! csrf_field() !!}
 
                 <div class="input-group mb-3">
