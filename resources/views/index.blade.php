@@ -436,7 +436,7 @@
 	                <h3 class="font-size-9 mb-7" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
 	                  Download our mobile app.</h3>
 	                <p class="font-size-6 mb-0 " data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true"> 
-	                Esse laboris dolor cupidatat irure occaecat nostrud..</p>
+	                Get Sella now available on Apple and Google Play Store.</p>
 	              </div>
 	            </div>
 	            <div class="col-lg-5 offset-xl-1 col-md-8 col-sm-10">
