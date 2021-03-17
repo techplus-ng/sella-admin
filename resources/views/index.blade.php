@@ -86,7 +86,7 @@
 
 	                @if(Auth::check())
 						<li class="nav-item">
-		                  <a class="nav-link" href="{{url('dashboard')}}">For Retailers</a>
+		                  <a class="nav-link" href="{{url('dashboard')}}">Dashboard</a>
 		                </li>
 					@endif
 	                <li class="nav-item">

@@ -9,18 +9,18 @@
     <link rel="icon" type="image/png" href="{{$app_logo}}" />
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{asset('plugins/font-awesome/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link href="https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css" rel="stylesheet">
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{asset('dist/css/adminlte.css')}}">
+    <link rel="stylesheet" href="dist/css/adminlte.css">
     <!-- iCheck -->
-    <link rel="stylesheet" href="{{asset('plugins/iCheck/flat/blue.css')}}">
+    <link rel="stylesheet" href="plugins/iCheck/flat/blue.css">
 {{--<!-- Bootstrap -->--}}
-{{--<link rel="stylesheet" href="{{asset('plugins/bootstrap/css/bootstrap.min.css')}}">--}}
+{{--<link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">--}}
 <!-- Google Font: Poppins -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,700" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/custom.css')}}">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
@@ -35,11 +35,11 @@
 <!-- /.login-box -->
 
 <!-- jQuery -->
-<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+<script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- iCheck -->
-<script src="{{asset('plugins/iCheck/icheck.min.js')}}"></script>
+<script src="plugins/iCheck/icheck.min.js"></script>
 <script>
     $(function () {
         $('.icheck input').iCheck({
