@@ -8,6 +8,7 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+// window.Vue.defaults.baseURL = 'https://getsella.com';
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
