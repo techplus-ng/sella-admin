@@ -67,6 +67,7 @@ class ProductController extends Controller
      */
     public function index(ProductDataTable $productDataTable)
     {
+        // return $dataTable->scripts();
         return $productDataTable->render('products.index');
     }
 
