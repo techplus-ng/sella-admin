@@ -8,14 +8,14 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" href="{{asset('plugins/font-awesome/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css')}}">
     @stack('css_lib')
-    <link rel="stylesheet" href="dist/css/adminlte.css">
-    <link rel="stylesheet" href="plugins/bootstrap-sweetalert/sweetalert.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600" rel="stylesheet">
-    <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="css/{{ setting("theme_color", "primary") }}.css">
+    <link rel="stylesheet" href="{{asset('dist/css/adminlte.css')}}">
+    <link rel="stylesheet" href="{{asset('plugins/bootstrap-sweetalert/sweetalert.css')}}">
+    <link rel="stylesheet" href="{{asset('css/custom.css')}}">
+    {{-- <link rel="stylesheet" href="{{asset('css').setting("theme_color", "primary").'.css' }}"> --}}
     @yield('css_custom')
 </head>
 
@@ -210,14 +210,14 @@
     </script>
 
     <!-- datepicker -->
-    <script src="plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="{{asset('plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js')}}"></script>
     <!-- Slimscroll -->
-    <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
-    <script src="plugins/bootstrap-sweetalert/sweetalert.min.js"></script>
+    <script src="{{asset('plugins/slimScroll/jquery.slimscroll.min.js')}}"></script>
+    <script src="{{asset('plugins/bootstrap-sweetalert/sweetalert.min.js')}}"></script>
     @stack('scripts_lib')
-    <script src="dist/js/adminlte.js"></script>
-    <script src="dist/js/demo.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="{{asset('dist/js/adminlte.js')}}"></script>
+    <script src="{{asset('dist/js/demo.js')}}"></script>
+    <script src="{{asset('js/scripts.js')}}"></script>
     @stack('scripts')
 </body>
 </html>
