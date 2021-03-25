@@ -6,5 +6,5 @@
 
 @push('scripts_lib')
 @include('layouts.datatables_js')
-{!! $dataTable->scripts() !!}
+{{-- {!! $dataTable->scripts() !!} --}}
 @endpush

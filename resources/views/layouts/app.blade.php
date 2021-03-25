@@ -9,34 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
-
-    <!-- Ionicons -->
-{{--<link href="https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css" rel="stylesheet">--}}
-{{--<!-- iCheck -->--}}
-{{--<link rel="stylesheet" href="plugins/iCheck/flat/blue.css">--}}
-{{--<!-- select2 -->--}}
-{{--<link rel="stylesheet" href="plugins/select2/select2.min.css">--}}
-<!-- Morris chart -->
-{{--<link rel="stylesheet" href="plugins/morris/morris.css">--}}
-<!-- jvectormap -->
-{{--<link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">--}}
-<!-- Date Picker -->
-<link rel="stylesheet" href="plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
-<!-- Daterange picker -->
-{{--<link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css">--}}
-{{--<!-- bootstrap wysihtml5 - text editor -->--}}
-{{--<link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">--}}
-
-@stack('css_lib')
-<!-- Theme style -->
+    <link rel="stylesheet" href="plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
+    @stack('css_lib')
     <link rel="stylesheet" href="dist/css/adminlte.css">
     <link rel="stylesheet" href="plugins/bootstrap-sweetalert/sweetalert.css">
-    {{--<!-- Bootstrap -->--}}
-    {{--<link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">--}}
-
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600" rel="stylesheet">
     <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="css/'.setting("theme_color","primary").'.css">
+    <link rel="stylesheet" href="css/{{ setting("theme_color", "primary") }}.css">
     @yield('css_custom')
 </head>
 
@@ -164,13 +143,6 @@
 
     <!-- jQuery -->
     <script src="plugins/jquery/jquery.min.js"></script>
-    <!-- jQuery UI 1.11.4 -->
-    {{--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>--}}
-    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-    {{--<script>--}}
-    {{--$.widget.bridge('uibutton', $.ui.button)--}}
-    {{--</script>--}}
-    <!-- Bootstrap 4 -->
     <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -237,34 +209,14 @@
         }
     </script>
 
-    <!-- Sparkline -->
-    {{--<script src="plugins/sparkline/jquery.sparkline.min.js"></script>--}}
-    {{--<!-- iCheck -->--}}
-    {{--<script src="plugins/iCheck/icheck.min.js"></script>--}}
-    {{--<!-- select2 -->--}}
-    {{--<script src="plugins/select2/select2.min.js"></script>--}}
-    <!-- jQuery Knob Chart -->
-    {{--<script src="plugins/knob/jquery.knob.js"></script>--}}
-    <!-- daterangepicker -->
-    {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>--}}
-    {{--<script src="plugins/daterangepicker/daterangepicker.js"></script>--}}
     <!-- datepicker -->
     <script src="plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-    <!-- Bootstrap WYSIHTML5 -->
-    {{--<script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>--}}
     <!-- Slimscroll -->
     <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
     <script src="plugins/bootstrap-sweetalert/sweetalert.min.js"></script>
-    <!-- FastClick -->
-    {{--<script src="plugins/fastclick/fastclick.js"></script>--}}
     @stack('scripts_lib')
-    <!-- AdminLTE App -->
     <script src="dist/js/adminlte.js"></script>
-    {{--<!-- AdminLTE dashboard demo (This is only for demo purposes) -->--}}
-    {{--<script src="plugins/summernote/summernote-bs4.min.js"></script>--}}
-    <!-- AdminLTE for demo purposes -->
     <script src="dist/js/demo.js"></script>
-
     <script src="js/scripts.js"></script>
     @stack('scripts')
 </body>
