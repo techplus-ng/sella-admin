@@ -142,8 +142,8 @@
 
 
     <!-- jQuery -->
-    <script src="plugins/jquery/jquery.min.js"></script>
-    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+    <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     {{-- <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script> --}}
