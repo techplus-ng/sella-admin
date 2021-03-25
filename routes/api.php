@@ -1,11 +1,5 @@
 <?php
-/**
- * File name: api.php
- * Last modified: 2020.10.31 at 12:40:48
- * Author: SmarterVision - https://codecanyon.net/user/smartervision
- * Copyright (c) 2020
- *
- */
+URL::forceScheme('https');
 
 /*
 |--------------------------------------------------------------------------

@@ -1,4 +1,5 @@
 <?php
+URL::forceScheme('https');
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 
 /*
