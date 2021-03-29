@@ -344,11 +344,11 @@ $(document).ready(function() {
         $('.l6-testimonial').slick({
             dots: true,
             infinite: true,
-            speed: 1000,
+            speed: 1500,
             slidesToShow: 2,
             slidesToScroll: 1,
             autoplay: true,
-            autoplaySpeed: 2000,
+            autoplaySpeed: 2500,
             centerMode: false,
             arrows: false,
             responsive: [{
