@@ -134,7 +134,7 @@
 	          <div class="col-lg-6 col-md-9 col-sm-11">
 	            <div class="mt-8 mt-lg-0 pr-md-11 pr-lg-0 pr-xl-10" data-aos="fade-left" data-aos-delay="500" data-aos-once="true">
 	              <h1 class="font-size-13 mb-8 pr-xs-31 pr-sm-21 pr-md-10 pr-lg-0 line-height-84">Go Digital with Retail Distribution</h1>
-	              <p class="font-size-banner mb-0 pr-sm-10 pr-md-10 pr-lg-0 pr-xl-banner">Access thousands of retailers across the country with just a click or two on Sella. Focus on creation and leave distribution to us.</p>
+	              <p class="font-size-banner mb-0 pr-sm-10 pr-md-10 pr-lg-0 pr-xl-banner">Access thousands of retailers across the country with just a click on Sella. Focus on creation and leave distribution to us.</p>
 	              <div class="mt-10">
 	                <a class="btn btn-dark-green btn-4 rounded-5" href="#download">Download now</a>
 	            
@@ -483,7 +483,7 @@
 	                    <h4 class="font-size-5 opacity-4 mb-10" id="contacts">Contact information</h4>
 	                    <ul class="list-unstyled">
 	                      <li class="mb-7"><p class="font-size-5 text-default-color-2 ">Feel free to get in touch with us via phone or send us a message.</p></li>
-	                      <li class="mb-7"><p class="font-size-5 text-default-color-2 "> <span id="red-color"> info@techplus.com.ng <br> +234 704 736 0093 </span></p></li>
+	                      <li class="mb-7"><p class="font-size-5 text-default-color-2 "> <span id="red-color"> info@getsella.com <br> +234 704 736 0093 </span></p></li>
 	                    </ul>
 	                  </div>
 	                </div>
