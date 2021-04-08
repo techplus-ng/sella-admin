@@ -72,7 +72,7 @@
 	          <!-- Brand Logo-->
 	          <div class="brand-logo mt-3 mt-md-0"><a href="https://getsella.com/">
 	              <!-- light version logo (logo must be black)-->
-	              <img src="assets/image/sella-logo.png" alt="" class="light-version-logo">
+	              <img src="assets/image/sella-logo.svg" alt="" class="light-version-logo">
 	              <!-- Dark version logo (logo must be White)-->
 	              <img src="assets/image/logo-main-white.png" alt="" class="dark-version-logo">
 	            </a>
@@ -155,7 +155,7 @@
 	        <div class="row justify-content-center">
 	          <div class="col-12">
 	            <div class="text-center" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
-	              <a class="video-btn text-white font-size-6 mb-0" href="https://www.youtube.com/watch?v=LWZ7iytIA6k">
+	              <a class="video-btn text-white font-size-6 mb-0" href="#">
 	                <span class="text-golden-yellow mr-3">
 	                                <i
 	                                class="fa fa-play-circle"></i>
@@ -369,7 +369,7 @@
 	              <div class="col-12">
 	                <div class="l6-client">
 	                  <!-- client 1 -->
-	                      <div class="single-client bg-white border border-default-color-5 rounded-10 pt-7 pb-7 pt-sm-11 pt-md-11 pb-sm-10 pb-md-10 pl-7 pl-sm-11 pl-md-11 pr-7 pr-md-12 mx-md-6 focus-reset">
+	                      <div class="single-client rounded-10 pt-7 pb-7 pt-sm-11 pt-md-11 pb-sm-10 pb-md-10 pl-7 pl-sm-11 pl-md-11 pr-7 pr-md-12 mx-md-6 focus-reset">
 	                      
 	                        <div class="d-flex align-items-center">
 	                          <img src="assets/image/home-6/png/client-1.png" class="black"  alt="">
@@ -377,7 +377,7 @@
 	                      </div>
 	                  <!-- client 1 -->
 	                  <!-- client 2 -->
-	                      <div class="single-client bg-white border border-default-color-5 rounded-10 pt-7 pb-7 pt-sm-11 pt-md-11 pb-sm-10 pb-md-10 pl-7 pl-sm-11 pl-md-11 pr-7 pr-md-12 mx-md-6 focus-reset">
+	                      <div class="single-client rounded-10 pt-7 pb-7 pt-sm-11 pt-md-11 pb-sm-10 pb-md-10 pl-7 pl-sm-11 pl-md-11 pr-7 pr-md-12 mx-md-6 focus-reset">
 	                      
 	                        <div class="d-flex align-items-center">
 	                          <img src="assets/image/home-6/png/client-2.png" class="black"  alt="">
@@ -385,7 +385,7 @@
 	                      </div>
 	                  <!-- client 2 -->
 	                  <!-- client 3 -->
-	                      <div class="single-client bg-white border border-default-color-5 rounded-10 pt-7 pb-7 pt-sm-11 pt-md-11 pb-sm-10 pb-md-10 pl-7 pl-sm-11 pl-md-11 pr-7 pr-md-12 mx-md-6 focus-reset">
+	                      <div class="single-client rounded-10 pt-7 pb-7 pt-sm-11 pt-md-11 pb-sm-10 pb-md-10 pl-7 pl-sm-11 pl-md-11 pr-7 pr-md-12 mx-md-6 focus-reset">
 	                      
 	                        <div class="d-flex align-items-center">
 	                          <img src="assets/image/home-6/png/client-3.png" class="black"  alt="">
@@ -393,7 +393,7 @@
 	                      </div>
 	                  <!-- client 3 -->
 	                  <!-- client 4 -->
-	                      <div class="single-client bg-white border border-default-color-5 rounded-10 pt-7 pb-7 pt-sm-11 pt-md-11 pb-sm-10 pb-md-10 pl-7 pl-sm-11 pl-md-11 pr-7 pr-md-12 mx-md-6 focus-reset">
+	                      <div class="single-client rounded-10 pt-7 pb-7 pt-sm-11 pt-md-11 pb-sm-10 pb-md-10 pl-7 pl-sm-11 pl-md-11 pr-7 pr-md-12 mx-md-6 focus-reset">
 	                      
 	                        <div class="d-flex align-items-center">
 	                          <img src="assets/image/home-6/png/client-4.png" class="black"  alt="">
@@ -401,7 +401,7 @@
 	                      </div>
 	                  <!-- client 4 -->
 	                  <!-- client 5 -->
-	                      <div class="single-client bg-white border border-default-color-5 rounded-10 pt-7 pb-7 pt-sm-11 pt-md-11 pb-sm-10 pb-md-10 pl-7 pl-sm-11 pl-md-11 pr-7 pr-md-12 mx-md-6 focus-reset">
+	                      <div class="single-client rounded-10 pt-7 pb-7 pt-sm-11 pt-md-11 pb-sm-10 pb-md-10 pl-7 pl-sm-11 pl-md-11 pr-7 pr-md-12 mx-md-6 focus-reset">
 	                      
 	                        <div class="d-flex align-items-center">
 	                          <img src="assets/image/home-6/png/client-5.png" class="black" alt="">
@@ -409,7 +409,7 @@
 	                      </div>
 	                  <!-- client 5 -->
 	                  <!-- client 6 -->
-	                      <div class="single-client bg-white border border-default-color-5 rounded-10 pt-7 pb-7 pt-sm-11 pt-md-11 pb-sm-10 pb-md-10 pl-7 pl-sm-11 pl-md-11 pr-7 pr-md-12 mx-md-6 focus-reset">
+	                      <div class="single-client rounded-10 pt-7 pb-7 pt-sm-11 pt-md-11 pb-sm-10 pb-md-10 pl-7 pl-sm-11 pl-md-11 pr-7 pr-md-12 mx-md-6 focus-reset">
 	                      
 	                        <div class="d-flex align-items-center">
 	                          <img src="assets/image/home-6/png/client-6.png" class="black" alt="">
@@ -444,7 +444,7 @@
 	                <h5 class="font-size-6 text-oxford-blue opacity-7 font-weight-normal mb-7 ml-lg-6" id="download"data-aos="fade-up" data-aos-duration="500" data-aos-once="true">Available on</h5>
 	                <div class="btn-group text-center text-sm-left d-sm-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
 	                  <div class="w-100  mb-3 mb-lg-0 mx-auto mx-sm-3 text-center">
-	                    <a href="https://www.apple.com/app-store/"><img class="min-w-210 max-h-64" src="assets/image/home-6/png/app-store.svg" alt="" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true"></a>
+	                    <a href="#"><img class="min-w-210 max-h-64" src="assets/image/home-6/png/app-store.svg" alt="" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true"></a>
 	                  </div> 
 	                  <div class="w-100 mb-3 mb-lg-0 mx-auto mx-xs-3">
 	                    <a href="https://play.google.com/store/apps/details?id=com.getsella.client"><img class="min-w-210 max-h-64" src="assets/image/home-6/png/play-store.svg" alt="" data-aos="fade-up" data-aos-delay="500" data-aos-duration="500" data-aos-once="true"></a>
@@ -466,8 +466,8 @@
 	              <div class="pr-xl-20 mb-11 mb-lg-0">
 	                <div class="brand-logo mb-8">
 	                  <a href="javascript:">
-	                    <img class="mx-auto mx-0 light-version-logo default-logo" src="assets/image/sella-logo.png" alt="">
-	                    <img src="assets/image/sella-logo.png" alt="" class="dark-version-logo mx-auto mx-0">
+	                    <img class="mx-auto mx-0 light-version-logo default-logo" src="assets/image/sella-logo.svg" alt="">
+	                    <img src="assets/image/sella-logo.svg" alt="" class="dark-version-logo mx-auto mx-0">
 	                  </a>
 	                </div>
 	                <p class="font-size-5 mb-0 heading-default-color pr-xs-15 pr-sm-22 pr-md-10 pr-lg-15 pr-xl-10 opacity-7">
@@ -497,7 +497,7 @@
 	                      <li><a class="text-default-color-2 gr-hover-text-blue-3" href="#">.</a></li>
 	                      <li><a class="text-default-color-2 gr-hover-text-blue-3" href="#">Twitter</a></li>
 	                      <li><a class="text-default-color-2 gr-hover-text-blue-3" href="#">.</a></li>
-	                      <li><a class="text-default-color-2 gr-hover-text-blue-3" href="#">Instagram</a></li>
+	                      <li><a class="text-default-color-2 gr-hover-text-blue-3" href="https://www.instagram.com/getsellahq/">Instagram</a></li>
 	                    </ul>
 	                  </div>
 	                  <!-- <div class="border-top border-default-color-4 pt-10">
