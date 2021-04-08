@@ -342,7 +342,7 @@ $(document).ready(function() {
     }
     if (jQuery(".l6-testimonial").length > 0) {
         $('.l6-testimonial').slick({
-            dots: true,
+            dots: false,
             infinite: true,
             speed: 1500,
             slidesToShow: 2,
@@ -361,7 +361,7 @@ $(document).ready(function() {
                 {
                     breakpoint: 769,
                     settings: {
-                        centerPadding: '0',
+                        centerPadding: '10%',
                         slidesToShow: 1,
                     }
                 }
@@ -373,10 +373,10 @@ $(document).ready(function() {
     if (jQuery(".l6-client").length > 0) {
         $('.l6-client').slick({
             dots: false,
-            infinite: false,
+            infinite: true,
             speed: 1000,
-            slidesToShow: 2,
-            autoplay: false,
+            slidesToShow: 3,
+            autoplay: true,
             autoplaySpeed: 2000,
             centerMode: false,
             arrows: false,
