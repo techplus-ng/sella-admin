@@ -155,7 +155,7 @@
 	        <div class="row justify-content-center">
 	          <div class="col-12">
 	            <div class="text-center" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
-	              <a class="video-btn text-white font-size-6 mb-0" href="#">
+	              <a class="video-btn text-white font-size-6 mb-0" href="https://drive.google.com/file/d/1_Gf9-J7oDummBD4WP2eQqh46bsZu_5fN/view?usp=sharing">
 	                <span class="text-golden-yellow mr-3">
 	                                <i
 	                                class="fa fa-play-circle"></i>
@@ -464,51 +464,55 @@
 	          <div class="row pb-lg-18">
 	            <div class="col-lg-4 col-md-5 col-md-3 col-xs-8">
 	              <div class="pr-xl-20 mb-11 mb-lg-0">
-	                <div class="brand-logo mb-8">
+	                <div class="brand-logo mb-3">
 	                  <a href="javascript:">
 	                    <img class="mx-auto mx-0 light-version-logo default-logo" src="assets/image/sella-logo.svg" alt="">
 	                    <img src="assets/image/sella-logo.svg" alt="" class="dark-version-logo mx-auto mx-0">
 	                  </a>
 	                </div>
-	                <p class="font-size-5 mb-0 heading-default-color pr-xs-15 pr-sm-22 pr-md-10 pr-lg-15 pr-xl-10 opacity-7">
-	                Sella is a distributor app for Shopkeepers and store owners – A one-of-its-kind platform that gives manufacturers easy access to retailers, and retailers easy access to the best FMCG Brands, at best prices.</p>
-	              </div>
-	            </div>
-	            <div class="col-lg-8">
-	              <div class="row">
+	                <p class="font-size-5 mb-0 text-default-color-2">
+                Sella is a distributor app for Shopkeepers and store owners – A one-of-its-kind platform that gives manufacturers easy access to retailers, and retailers easy access to the best FMCG Brands, at best prices.</p>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="row">
 
-	                <!-- Single Widgets -->
-	                <div class="col-xl-4 col-lg-3 col-md-4 col-xs-6">
-	                  <div class="mb-10 mb-lg-0">
-	                    <h4 class="font-size-5 opacity-4 mb-10" id="contacts">Contact information</h4>
-	                    <ul class="list-unstyled">
-	                      <li class="mb-7"><p class="font-size-5 text-default-color-2 ">Feel free to get in touch with us via phone or send us a message.</p></li>
-	                      <li class="mb-7"><p class="font-size-5 text-default-color-2 "> <span id="red-color"> info@getsella.com <br> +234 704 736 0093 </span></p></li>
-	                    </ul>
-	                  </div>
-	                </div>
-	                <!-- End Single Widgets -->
-	                <!-- Single Widgets -->
-	                <div class="col-xl-4 col-lg-5 col-md-4 col-xs-8">
-	                  <div class="mb-10 mb-lg-0">
-	                    <h4 class="font-size-5 opacity-4 mb-10">Follow us on social media</h4>
-	                    <ul class="footer-social-link d-flex align-items-center justify-content-between list-unstyled flex-wrap mb-10">
-	                      <li><a class="text-default-color-2 gr-hover-text-blue-3" href="#">Facebook</a></li>
-	                      <li><a class="text-default-color-2 gr-hover-text-blue-3" href="#">.</a></li>
-	                      <li><a class="text-default-color-2 gr-hover-text-blue-3" href="#">Twitter</a></li>
-	                      <li><a class="text-default-color-2 gr-hover-text-blue-3" href="#">.</a></li>
-	                      <li><a class="text-default-color-2 gr-hover-text-blue-3" href="https://www.instagram.com/getsellahq/">Instagram</a></li>
-	                    </ul>
-	                  </div>
-	                  <!-- <div class="border-top border-default-color-4 pt-10">
-	                    <div class="mb-3">
-	                      <img class="w-100" src="assets/image/home-6/png/payment-1.png" alt="">
-	                    </div>
-	                    <div class="mb-3">
-	                      <img class="w-100" src="assets/image/home-6/png/payment-2.png" alt="">
-	                    </div> -->
-	                  </div>
-	                </div>
+                <!-- Single Widgets -->
+                <div class="col-xl-4 col-lg-3 col-md-4 col-xs-6">
+                  <div class="mb-10 mb-lg-0">
+                    <h4 class="font-size-5 opacity-4 mb-10" id="contacts">Contact information</h4>
+                    <ul class="list-unstyled">
+                      <li class="mb-7"><p class="font-size-5 text-default-color-2 ">Get in touch via phone or send us a mail.</p></li>
+                      <li class="mb-7"><p class="font-size-5 text-default-color-2 "> <span id="red-color"> info@techplus.com.ng <br> +234 704 736 0093 </span></p></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End Single Widgets -->
+                <!-- Single Widgets -->
+                <div class="col-xl-4 col-lg-3 col-md-4 col-xs-8">
+                  <div class="mb-10 mb-lg-0">
+                    <h4 class="font-size-5 opacity-4 mb-10">Terms and Conditions</h4>
+                    <ul class="list-unstyled">
+                      <li><a class="text-default-color-2 gr-hover-text-blue-3" href="https://drive.google.com/file/d/1_UuMhoi8ujwIkRWge8mSWRJYEMX5QIQ_/view?usp=sharing">Privacy Policy</a></li>
+                      <li><a class="text-default-color-2 gr-hover-text-blue-3" href="https://drive.google.com/file/d/1T9gQzDUVgO7XZoG4APqni3cTcrrS6EQs/view?usp=sharing">Terms of Use</a></li>
+
+                    </ul>
+                  </div>
+                </div>
+                <!-- End Single Widgets -->
+                <!-- Single Widgets -->
+                <div class="col-xl-4 col-lg-3 col-md-4 col-xs-8">
+                  <div class="mb-10 mb-lg-0">
+                    <h4 class="font-size-5 opacity-4 mb-10">Follow us on social media</h4>
+                    <ul class="footer-social-link d-flex align-items-center justify-content-between list-unstyled flex-wrap mb-10">
+                      <li><a class="text-default-color-2 gr-hover-text-blue-3" href="#">Facebook</a></li>
+                      <li><a class="text-default-color-2 gr-hover-text-blue-3" href="#">.</a></li>
+                      <li><a class="text-default-color-2 gr-hover-text-blue-3" href="https://twitter.com/getsellahq">Twitter</a></li>
+                      <li><a class="text-default-color-2 gr-hover-text-blue-3" href="#">.</a></li>
+                      <li><a class="text-default-color-2 gr-hover-text-blue-3" href="https://www.instagram.com/getsellahq/">Instagram</a></li>
+                    </ul>
+                  </div>
+                </div>
 	                <!-- End Single Widgets -->
 	              </div>
 	            </div>
