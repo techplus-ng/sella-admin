@@ -11,6 +11,10 @@ Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::post('signup/supplier', 'SignupSupplierController@signup');
+
+
 Route::get('/',                 'ExternalPageController@index');
 Route::get('/contact',          'ExternalPageController@contact');
 Route::get('/privacy/policy',   'ExternalPageController@privacyPolicy');

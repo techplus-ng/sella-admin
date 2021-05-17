@@ -340,7 +340,7 @@
 	                <p class="list font-size-7 mb-0" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true">Fix or set a budget.</p>
 	                <p class="list font-size-7 mb-0" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true">Get the product delivered to Sella warehouse.</p>            
 	              <div class="mt-13" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
-	                <a class="btn btn-dark-blue btn-3 rounded-5" href="#">Signup Now</a>
+	                <a class="btn btn-dark-blue btn-3 rounded-5" href="#" onclick="showSignupModal()">Signup Now</a>
 	              </div>
 	            </div>
 	          </div>
@@ -349,47 +349,11 @@
 	    </div>
 	    <!-- End contentTwo Area -->
 
-		<!-- start form area -->
+		{{-- <!-- start form area -->
 		<div class="modal" id="email-modal">
-      <div class="container">
-      <div class="pop-content row align-items-center">
-        <span class="close-btn">&times;</span>
-            <div class="pop-content-left col-lg-3 col-md-6 col-xs-5 ">              
-                <img id="form-img" class="ml-sm-16 mt-xl-14" src="./image/home-6/png/sup-form.png" alt="">              
-            </div>
-            <div class="pop-content-right col-lg-9 col-md-9 col-xs-10">
-              <div class= "pr-sm-8 pt- pr-md-10 ml-md-10 ml-xl-0" >
-                <h2 class="mb-2 pr-lg-20 font-size-9 pt-22">Become a GetSella Supplier</h2>
-                  <p class="font-size-5">Have access to thousands of retailers.</P>              
-                  <form action="#">
-                      <div class="data font-size-3 mb-2 col-12">                          
-                          <input type="text" placeholder="Your Name" required>
-                      </div>
-                      <div class="data font-size-3 mb-2 col-12">                          
-                          <input type="text" placeholder="Your Company" required>
-                      </div>
-                      <div class="data font-size-3 mb-2 col-12">                         
-                          <input type="email" placeholder="Business Email Address" required>
-                      </div>
-                      <div class="data font-size-3 mb-5 col-12">                          
-                          <input id="phone" type="tel" name="phone" placeholder="Phone Number" required>
-                      </div>
-                      <div class="form-btn font-size-3 mb-2">
-                          <button class="btn-4 btn btn-sm btn-red rounded-4" type="submit"> Submit</button>
-                      </div>
-                  </form>
-                    <div>
-                      <p class= "form-sen font-size-4 pt-30 pl-lg-35 pl-xs-8">Powered by <b>Xordium</b></p>
-                    </div>
-              </div>
-            </div>
-
-      </div>
-      </div>
-    </div>
-    
-     
-    <!-- end form area -->
+	      
+	    </div>
+    	<!-- end form area --> --}}
 
 	    <!-- StartClients -->
 
@@ -564,6 +528,55 @@
 	    </footer>
 	    <!-- End Footer Area -->
 	  </div>
+
+	  	<!-- SHOW MODAL -->
+	  	<div class="modal fade" id="show-signup-modal" role="dialog">
+	      	<div class="modal-dialog modal-lg modal-dialog-centered">
+	          	<div class="modal-content">
+	          		<div class="modal-body container">
+				        <div class="row align-items-center">
+				            <div class="col-md-12">
+				            	<a href="javascript:void(0);" onclick="hideSignupModal()" class="float-right px-3 py-3">
+				            		<span>&times;</span>
+				            	</a>
+				            </div>
+				            <div class="col-md-4">              
+				                {{-- <img id="form-img" class="ml-sm-16 mt-xl-14" src="{{asset('image/home-6/png/sup-form.png')}}" alt="">  --}}             
+				            </div>
+				            <div class="col-md-8">
+				                <h2 class="mb-2 pr-lg-20 font-size-9 pt-22">Become a GetSella Supplier</h2>
+				                <p class="font-size-5">Have access to thousands of retailers.</p>              
+				                <form method="POST" onsubmit="return signupSupplier()">
+				                  	<div class="form-group">
+	          	                     	<label for="contact_name">Contact Name</label>
+	          	                     	<input type="text" id="contact_name" placeholder="Your Name" class="form-control" required>
+	          	                    </div> 
+	          	                    <div class="form-group">
+                                    	<label for="company">Company</label>
+                                    	<input type="text" id="company" placeholder="Your Company" class="form-control" required>
+                                    </div>  
+
+                                    <div class="form-group">
+                                    	<label for="contact_email">Contact Email</label>
+                                    	<input type="email" id="contact_email" placeholder="Business Email Address" class="form-control" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                    	<label for="contact_phone">Contact Phone</label>
+                                    	<input type="tel" id="contact_phone" placeholder="Phone Number" class="form-control" required>
+                                    </div>
+
+				                    <div class="form-group">
+				                    	<button class="btn-4 btn btn-sm btn-red rounded-4" type="submit"> Submit</button>
+				                    </div>
+				                </form>
+			                    <p class= "form-sen font-size-4 pt-30 pl-lg-35 pl-xs-8">Powered by <b>Xordium</b></p>
+				            </div>
+				      	</div>
+				    </div>
+	            </div>
+	      	</div>
+	  	</div>
 	  <!-- Vendor Scripts -->
 	  <script src="assets/js/vendor.min.js"></script>
 	  <!-- Plugin's Scripts -->
@@ -575,5 +588,54 @@
 	  <script src="assets/plugins/counter-up/jquery.waypoints.min.js"></script>
 	  <!-- Activation Script -->
 	  <script src="assets/js/custom.js"></script>
+	  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	  <script type="text/javascript">
+	  	function showSignupModal() {
+	  		$("#show-signup-modal").modal({
+	  			backdrop: false
+	  		});
+	  	}
+
+	  	function hideSignupModal() {
+	  		window.location.reload();
+	  	}
+
+	  	function signupSupplier() {
+	  		var _token 	= '{{ csrf_token() }}';
+	  		var name 	= $("#contact_name").val();
+	  		var company = $("#company").val();
+	  		var email 	= $("#contact_email").val();
+	  		var phone 	= $("#contact_phone").val();
+
+
+	  		var query = {_token, name, company, email, phone}
+
+	  		fetch(`{{url('signup/supplier')}}`, {
+	  			method: 'POST',
+	  			headers: {
+	  				'Content-Type': 'application/json',
+	  			},
+	  			body: JSON.stringify(query)
+	  		}).then(r => {
+	  			return r.json();
+	  		}).then(results => {
+	  			// console.log(results);
+	  			swal(
+	  				results.status,
+	  				results.message,
+	  				results.status
+	  			);
+
+	  			setTimeout(function(){
+	  				window.location.reload();
+	  			}, 1000 * 2);
+	  		}).catch(err => {
+	  			console.log(err);
+	  		});
+
+	  		// void
+	  		return false;
+	  	}
+	  </script>
 	</body>
 </html>
