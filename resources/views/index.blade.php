@@ -55,6 +55,7 @@
 		<link rel="stylesheet" href="assets/plugins/fancybox/jquery.fancybox.min.css">
 		<link rel="stylesheet" href="assets/plugins/nice-select/nice-select.min.css">
 		<link rel="stylesheet" href="assets/plugins/slick/slick.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
 		<!-- Vendor stylesheets  -->
 		<link rel="stylesheet" href="assets/css/main.css">
 		<!-- Custom stylesheet -->
@@ -371,6 +372,9 @@
                       <div class="data font-size-3 mb-2 col-12">                         
                           <input type="email" placeholder="Business Email Address" required>
                       </div>
+					  <div class="data font-size-3 mb-2 col-12">                         
+                          <input type="text" placeholder="Business Industry" required>
+                      </div>
                       <div class="data font-size-3 mb-5 col-12">                          
                           <input id="phone" type="tel" name="phone" placeholder="Phone Number" required>
                       </div>
@@ -573,7 +577,15 @@
 	  <script src="assets/plugins/slick/slick.min.js"></script>
 	  <script src="assets/plugins/counter-up/jquery.counterup.min.js"></script>
 	  <script src="assets/plugins/counter-up/jquery.waypoints.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 	  <!-- Activation Script -->
 	  <script src="assets/js/custom.js"></script>
 	</body>
+	<script>
+	const phoneInputField = document.querySelector("#phone");
+	const phoneInput = window.intlTelInput(phoneInputField, {
+		utilsScript:
+		"https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+	});
+	</script>
 </html>
