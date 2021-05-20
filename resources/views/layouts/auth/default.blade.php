@@ -25,7 +25,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="{{ url('/') }}"><img src="{{$app_logo}}" alt="{{setting('app_name')}}"></a>
+        <a href="{{ url('/') }}"><img src="{{asset('images/sella-logo.png')}}" alt="{{setting('app_name')}}" style="border-radius: 10px;"></a>
     </div>
     <!-- /.login-logo -->
     <div class="card">

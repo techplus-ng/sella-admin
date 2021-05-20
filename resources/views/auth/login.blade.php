@@ -44,33 +44,33 @@
                     </div>
                     <!-- /.col -->
                 </div>
-@if(env('APP_DEMO',false))
-                <div class="row mb-2">
-                    <div class="col-12 callout callout-success">
-                        <h6 class="text-bold">Admin</h6>
-                        <p><small>User: admin@demo.com | Password: 123456</small></p>
-                    </div>
-                    <!-- /.col -->
-                </div>
-                <div class="row mb-2">
-                    <div class="col-12 callout callout-warning">
-                        <h6 class="text-bold">Manager</h6>
-                        <p><small>User: manager@demo.com | Password: 123456</small></p>
-                    </div>
-                    <!-- /.col -->
-                </div>
-                <div class="row mb-2">
-                    <div class="col-12 callout callout-danger">
-                        <h6 class="text-bold">Client</h6>
-                        <p><small>User: client@demo.com | Password: 123456</small></p>
-                    </div>
-                    <!-- /.col -->
-                </div>
-@endif
+{{-- @if(env('APP_DEMO',false))
+    <div class="row mb-2">
+        <div class="col-12 callout callout-success">
+            <h6 class="text-bold">Admin</h6>
+            <p><small>User: admin@demo.com | Password: 123456</small></p>
+        </div>
+        <!-- /.col -->
+    </div>
+    <div class="row mb-2">
+        <div class="col-12 callout callout-warning">
+            <h6 class="text-bold">Manager</h6>
+            <p><small>User: manager@demo.com | Password: 123456</small></p>
+        </div>
+        <!-- /.col -->
+    </div>
+    <div class="row mb-2">
+        <div class="col-12 callout callout-danger">
+            <h6 class="text-bold">Client</h6>
+            <p><small>User: client@demo.com | Password: 123456</small></p>
+        </div>
+        <!-- /.col -->
+    </div>
+@endif --}}
 
             </form>
 
-            @if(setting('enable_facebook',false) || setting('enable_google',false) || setting('enable_twitter',false))
+            {{-- @if(setting('enable_facebook',false) || setting('enable_google',false) || setting('enable_twitter',false))
                 <div class="social-auth-links text-center mb-3">
                     <p style="text-transform: uppercase">- {{__('lang.or')}} -</p>
                     @if(setting('enable_facebook',false))
@@ -88,7 +88,7 @@
                     @endif
                 </div>
                 <!-- /.social-auth-links -->
-            @endif
+            @endif --}}
 
             <p class="mb-1 text-center">
                 <a href="{{ url('/password/reset') }}">{{__('auth.forgot_password')}}</a>
