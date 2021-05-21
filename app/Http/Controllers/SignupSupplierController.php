@@ -15,10 +15,12 @@ class SignupSupplierController extends Controller
     */
     public function signup(Request $request){
     	$mail_data = [
-    		'name' => $request->name,
-    		'company' => $request->company,
-    		'email' => $request->email,
-    		'phone' => $request->phone,
+    		'name'                => $request->name,
+    		'company'             => $request->company,
+    		'email'               => $request->email,
+    		'phone'               => $request->phone,
+            'business_category'   => $request->business_category,
+            'about_business'      => $request->about_business,
     	];
 
     	// Mail::to($request->email)->send(new NewSupplierSignupNotification($mail_data));

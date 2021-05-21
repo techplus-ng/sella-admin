@@ -55,9 +55,10 @@
 		<link rel="stylesheet" href="assets/plugins/fancybox/jquery.fancybox.min.css">
 		<link rel="stylesheet" href="assets/plugins/nice-select/nice-select.min.css">
 		<link rel="stylesheet" href="assets/plugins/slick/slick.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
 		<!-- Vendor stylesheets  -->
 		<link rel="stylesheet" href="assets/css/main.css">
+		<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+		<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 		<!-- Custom stylesheet -->
 	</head>
 	<body data-theme="light">
@@ -352,48 +353,9 @@
 
 		{{-- <!-- start form area -->
 		<div class="modal" id="email-modal">
-      <div class="container">
-      <div class="pop-content row align-items-center">
-        <span class="close-btn">&times;</span>
-            <div class="pop-content-left col-lg-3 col-md-6 col-xs-5 ">              
-                <img id="form-img" class="ml-sm-16 mt-xl-14" src="./image/home-6/png/sup-form.png" alt="">              
-            </div>
-            <div class="pop-content-right col-lg-9 col-md-9 col-xs-10">
-              <div class= "pr-sm-8 pt- pr-md-10 ml-md-10 ml-xl-0" >
-                <h2 class="mb-2 pr-lg-20 font-size-9 pt-22">Become a GetSella Supplier</h2>
-                  <p class="font-size-5">Have access to thousands of retailers.</P>              
-                  <form action="#">
-                      <div class="data font-size-3 mb-2 col-12">                          
-                          <input type="text" placeholder="Your Name" required>
-                      </div>
-                      <div class="data font-size-3 mb-2 col-12">                          
-                          <input type="text" placeholder="Your Company" required>
-                      </div>
-                      <div class="data font-size-3 mb-2 col-12">                         
-                          <input type="email" placeholder="Business Email Address" required>
-                      </div>
-					  <div class="data font-size-3 mb-2 col-12">                         
-                          <input type="text" placeholder="Business Industry" required>
-                      </div>
-                      <div class="data font-size-3 mb-5 col-12">                          
-                          <input id="phone" type="tel" name="phone" placeholder="Phone Number" required>
-                      </div>
-                      <div class="form-btn font-size-3 mb-2">
-                          <button class="btn-4 btn btn-sm btn-red rounded-4" type="submit"> Submit</button>
-                      </div>
-                  </form>
-                    <div>
-                      <p class= "form-sen font-size-4 pt-30 pl-lg-35 pl-xs-8">Powered by <b>Xordium</b></p>
-                    </div>
-              </div>
-            </div>
-
-      </div>
-      </div>
-    </div>
-    
-     
-    <!-- end form area -->
+	      
+	    </div>
+    	<!-- end form area --> --}}
 
 	    <!-- StartClients -->
 
@@ -581,7 +543,7 @@
 				            	</a>
 				            </div>
 				            <div class="col-md-4">              
-				                {{-- <img id="form-img" class="ml-sm-16 mt-xl-14" src="{{asset('image/home-6/png/sup-form.png')}}" alt="">  --}}             
+				                <img id="form-img" class="ml-sm-16 mt-xl-14" src="{{asset('images/sup-form.png')}}" alt="">              
 				            </div>
 				            <div class="col-md-8">
 				                <h2 class="mb-2 pr-lg-20 font-size-9 pt-22">Become a GetSella Supplier</h2>
@@ -606,6 +568,16 @@
                                     	<input type="tel" id="contact_phone" placeholder="Phone Number" class="form-control" required>
                                     </div>
 
+                                    <div class="form-group">
+                                    	<label for="business_category">Business Category</label>
+                                    	<input type="text" id="business_category" class="form-control" placeholder="Eg. Fintech, eCommerce, Esport, Fashion etc..." name="">
+                                    </div>
+
+                                    <div class="form-group">
+                                    	<label for="contact_phone">Tell us about your business</label>
+                                    	<textarea class="form-control" id="about_business" placeholder="Type here..." style="resize: none;"></textarea>
+                                    </div>
+
 				                    <div class="form-group">
 				                    	<button class="btn-4 btn btn-sm btn-red rounded-4" type="submit"> Submit</button>
 				                    </div>
@@ -626,11 +598,13 @@
 	  <script src="assets/plugins/slick/slick.min.js"></script>
 	  <script src="assets/plugins/counter-up/jquery.counterup.min.js"></script>
 	  <script src="assets/plugins/counter-up/jquery.waypoints.min.js"></script>
-	  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 	  <!-- Activation Script -->
 	  <script src="assets/js/custom.js"></script>
 	  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	  <script type="text/javascript">
+	  	$(document).ready(function() {
+		    $('#business_category').select2();
+		});
 	  	function showSignupModal() {
 	  		$("#show-signup-modal").modal({
 	  			backdrop: false
@@ -647,9 +621,11 @@
 	  		var company = $("#company").val();
 	  		var email 	= $("#contact_email").val();
 	  		var phone 	= $("#contact_phone").val();
+	  		var business_category = $("#business_category").val();
+	  		var about_business = $("#about_business").val();
 
 
-	  		var query = {_token, name, company, email, phone}
+	  		var query = {_token, name, company, email, phone, business_category, about_business}
 
 	  		fetch(`{{url('signup/supplier')}}`, {
 	  			method: 'POST',
@@ -679,11 +655,4 @@
 	  	}
 	  </script>
 	</body>
-	<script>
-	const phoneInputField = document.querySelector("#phone");
-	const phoneInput = window.intlTelInput(phoneInputField, {
-		utilsScript:
-		"https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-	});
-	</script>
 </html>
