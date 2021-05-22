@@ -1,6 +1,6 @@
 "use strict";
 $(document).ready(function() {
-    $("select").niceSelect();
+    // $("select").niceSelect();
 
     /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
         AOS Animation Activation
@@ -401,24 +401,24 @@ $(document).ready(function() {
 
       // l6 form section
 
-      const modal = document.getElementById('email-modal');
-      const openBtn = document.querySelector('.pop-btn');
-      const closeBtn = document.querySelector('.close-btn');
+      // const modal = document.getElementById('email-modal');
+      // const openBtn = document.querySelector('.pop-btn');
+      // const closeBtn = document.querySelector('.close-btn');
   
-      //Click events
-      openBtn.addEventListener('click', () => {
-          modal.style.display ='block';
-      });
+      // //Click events
+      // openBtn.addEventListener('click', () => {
+      //     modal.style.display ='block';
+      // });
   
-      closeBtn.addEventListener('click', () =>{
-          modal.style.display ='none';
-      });
+      // closeBtn.addEventListener('click', () =>{
+      //     modal.style.display ='none';
+      // });
   
-      window.addEventListener('click', (e) => {
-          if(e.target === modal) {
-              modal.style.display ='none';
-          }
-      });
+      // window.addEventListener('click', (e) => {
+      //     if(e.target === modal) {
+      //         modal.style.display ='none';
+      //     }
+      // });
   
 
     // Feature Section

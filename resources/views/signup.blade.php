@@ -46,30 +46,31 @@
 
 		<link rel="shortcut icon" href="image/favicon.png" type="image/x-icon">
 		<!-- Bootstrap , fonts & icons  -->
-		<link rel="stylesheet" href="assets/css/bootstrap.css">
-		<link rel="stylesheet" href="assets/fonts/icon-font/css/style.css">
-		<link rel="stylesheet" href="assets/fonts/typography-font/typo.css">
-		<link rel="stylesheet" href="assets/fonts/fontawesome-5/css/all.css">
+		<link rel="stylesheet" href="{{asset('assets/css/bootstrap.css')}}">
+		<link rel="stylesheet" href="{{asset('assets/fonts/icon-font/css/style.css')}}">
+		<link rel="stylesheet" href="{{asset('assets/fonts/typography-font/typo.css')}}">
+		<link rel="stylesheet" href="{{asset('assets/fonts/fontawesome-5/css/all.css')}}">
 		<!-- Plugin'stylesheets  -->
-		<link rel="stylesheet" href="assets/plugins/aos/aos.min.css">
-		<link rel="stylesheet" href="assets/plugins/fancybox/jquery.fancybox.min.css">
-		<link rel="stylesheet" href="assets/plugins/nice-select/nice-select.min.css">
-		<link rel="stylesheet" href="assets/plugins/slick/slick.min.css">
+		<link rel="stylesheet" href="{{asset('assets/plugins/aos/aos.min.css')}}">
+		<link rel="stylesheet" href="{{asset('assets/plugins/fancybox/jquery.fancybox.min.css')}}">
+		<link rel="stylesheet" href="{{asset('assets/plugins/nice-select/nice-select.min.css')}}">
+		<link rel="stylesheet" href="{{asset('assets/plugins/slick/slick.min.css')}}">
 		<!-- Vendor stylesheets  -->
-		<link rel="stylesheet" href="assets/css/main.css">
+		<link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
 		<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 		<!-- Custom stylesheet -->
 
-		<style type="text/css">
-			.img-overlay {
-
-			}
-		</style>
+		
 	</head>
 	<body data-theme="light">
+		<style type="text/css">
+			.select2-container {
+			    min-width: 100% !important;
+			}
+		</style>
 	  <div class="site-wrapper overflow-hidden ">
 	    <div id="loading">
-	      <img src="assets/image/preloader.gif" alt="">
+	      <img src="{{asset('assets/image/preloader.gif')}}" alt="">
 	    </div>
 	    <!-- Header Area -->
 	    <!-- Header Area -->
@@ -79,9 +80,9 @@
 	          <!-- Brand Logo-->
 	          <div class="brand-logo mt-3 mt-md-0"><a href="https://getsella.com/">
 	              <!-- light version logo (logo must be black)-->
-	              <img src="assets/image/sella-logo.svg" alt="" class="light-version-logo">
+	              <img src="{{asset('assets/image/sella-logo.svg')}}" alt="" class="light-version-logo">
 	              <!-- Dark version logo (logo must be White)-->
-	              <img src="assets/image/logo-main-white.png" alt="" class="dark-version-logo">
+	              <img src="{{asset('assets/image/logo-main-white.png')}}" alt="" class="dark-version-logo">
 	            </a>
 	          </div>
 	          <div class="collapse navbar-collapse" id="mobile-menu">
@@ -126,34 +127,68 @@
 	    <!-- navbar- -->
 	    <!-- End Header Area -->
 	    <!-- heroSix Area -->
-	    <div class="position-relative pt-25 pt-md-31 pt-lg-35 pb-15 pb-md-19 pb-lg-33 position-relative overflow-hidden">
+	    <div class="position-relative pt-md-31 position-relative overflow-hidden">
 	      <div class="container position-static">
 	        <div class="row align-items-center justify-content-center position-static">
 	          <!-- Hero Image -->
-	          <div class="col-xl-6 col-lg-6 col-md-9 col-xs-8 position-static">
-	            <div class="l6-hero-image-group">
-	              <img class="w-100 banner-image" src="assets/image/home-6/png/banner-img.png" alt="" data-aos="fade-up" data-aos-once="true">
-
-	            </div>
-	          </div>
+	          
 	          <!-- End Hero Image -->
+	          <div class="col-lg-6 col-md-3 col-sm-11">
+	          	<img class="" src="{{asset('images/sup-form.png')}}" alt="">     
+	          </div>
 	          <!-- Hero Content -->
 	          <div class="col-lg-6 col-md-9 col-sm-11">
 	            <div class="mt-8 mt-lg-0 pr-md-11 pr-lg-0 pr-xl-10" data-aos="fade-left" data-aos-delay="500" data-aos-once="true">
-	              <h1 class="font-size-13 mb-8 pr-xs-31 pr-sm-21 pr-md-10 pr-lg-0 line-height-84">Go Digital with Retail Distribution</h1>
-	              <p class="font-size-banner mb-0 pr-sm-10 pr-md-10 pr-lg-0 pr-xl-banner">Access thousands of retailers across the country with just a click on Sella. Focus on creation and leave distribution to us.</p>
-	              <div class="mt-10">
-	                <a class="btn btn-dark-green btn-4 rounded-5" href="#download">Download now</a>
-	            
-	              </div>
+	              	<h2 class="font-size-9">Become a GetSella Supplier</h2>
+	                <p class="font-size-5">Have access to thousands of retailers.</p>              
+	                <form method="POST" onsubmit="return signupSupplier()">
+	                  	<div class="form-group">
+		                     	<label for="contact_name">Contact Name</label>
+		                     	<input type="text" id="contact_name" placeholder="Your Name" class="form-control" required>
+		                    </div> 
+		                    <div class="form-group">
+	                    	<label for="company">Company</label>
+	                    	<input type="text" id="company" placeholder="Your Company" class="form-control" required>
+	                    </div>  
+
+	                    <div class="form-group">
+	                    	<label for="contact_email">Contact Email</label>
+	                    	<input type="email" id="contact_email" placeholder="Business Email Address" class="form-control" required>
+	                    </div>
+
+	                    <div class="form-group">
+	                    	<label for="contact_phone">Contact Phone</label>
+	                    	<input type="tel" id="contact_phone" placeholder="Phone Number" class="form-control" required>
+	                    </div>
+
+	                    {{-- <div class="form-group">
+	                    	<label for="business_category">Business Category</label>
+	                    	<input type="text" id="business_category" class="form-control" placeholder="Eg. Fintech, eCommerce, Esport, Fashion etc..." name="">
+	                    </div> --}}
+	                    <div class="form-group">
+                        	<label for="business_category">Business Category</label>
+                        	<select id="business_category" name="business_category[]" multiple="multiple" class="form-control" style="width: 100% !important;">
+                        		<option value=""> -- select -- </option>
+                        	</select>
+                        </div>
+
+	                    <div class="form-group">
+	                    	<label for="contact_phone">Tell us about your business</label>
+	                    	<textarea class="form-control" id="about_business" placeholder="Type here..." style="resize: none;"></textarea>
+	                    </div>
+
+	                    <div class="form-group">
+	                    	<button class="btn-4 btn btn-sm btn-red rounded-4" type="submit"> Submit</button>
+	                    </div>
+	                </form>
 	            </div>
 	          </div>
 	          <!-- End Hero Content -->
 	        </div>
 	      </div>
-	      <div class="absolute-bottom-right mb-13 mb-md-17 mb-lg-26 d-none d-sm-block mr-n25 mr-md-n15 mr-lg-n7" data-aos="fade-left" data-aos-delay="500" data-aos-once="true">
-	        <img class="w-50 w-md-75 w-lg-100" src="assets/image/home-6/png/quadrant-blue.png" alt="">
-	      </div>
+	      {{-- <div class="absolute-bottom-right mb-13 mb-md-17 mb-lg-26 d-none d-sm-block mr-n25 mr-md-n15 mr-lg-n7" data-aos="fade-left" data-aos-delay="500" data-aos-once="true">
+	        <img class="w-50 w-md-75 w-lg-100" src="{{asset('assets/image/home-6/png/quadrant-blue.png')}}" alt="">
+	      </div> --}}
 	    </div>
 	    <!-- End heroSix Area -->
 	    <!-- videoLink Area -->
@@ -283,79 +318,6 @@
 	    </div>
 	    <!-- End Sella snippet Area -->
 
-	    <!-- contentOne Area -->
-	    <div class="bg-default-6 pt-14 pt-md-19 pt-lg-34 pb-9 pb-md-14 pb-lg-34 overflow-hidden position-relative">
-	      <div class="container">
-	        <div class="row align-items-center justify-content-center justify-content-lg-start">
-	          <!-- Content Section -->
-	          <div class="col-xl-5 col-lg-6 col-md-8 col-xs-10 order-2 order-md-1">
-	            <div class="pt-7 pb-7 pr-sm-5 pr-md-9 pr-lg-0">
-	              <p class="font-size-7 mb-0" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true">HOW IT WORKS</p>
-	              <br>
-	                <h2 class="font-size-11 mb-9 pr-sm-18 pr-md-10 pr-lg-5 pr-xl-5" id="retailer-link" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">Register as a Retailer</h2>
-	          
-	                <p class="list font-size-7 mb-0" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true">Create an account, its FREE.</p>
-	                <p class="list font-size-7 mb-0" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true">Select the products you want to restock.</p>
-	                <p class="list font-size-7 mb-0" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true">Choose how to pay &#91; Bank Transfer, Card, Pay on Delivery &#93;.</p>
-	                <p class="list font-size-7 mb-0" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true">Place your order.</p>            
-	                <p class="list font-size-7 mb-0" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true">Get your goods in 24 hours</p>
-	               <div class="mt-13" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
-	                <a class="btn btn-dark-blue btn-3 rounded-5" href="#download">Download Now</a>
-	               </div>
-	            </div>
-	          </div>
-	          <!-- Content Image Section -->
-	          <div class="col-xl-6 offset-xl-1 col-lg-6 col-xs-4 order-1 order-md-2">
-	            <div class="l6-content-image-group-2 ml-lg-18">
-	              <!--<div class="img-1">
-	                <img class="w-100" src="assets/image/home-6/png/yellow-small-shape.png" alt="" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true">
-	              </div>
-	              -->
-	              <div class="img-1">
-	                <img class="w-100" src="assets/image/home-6/png/dots.png" alt="" data-aos="fade-down" data-aos-duration="500" data-aos-delay="300" data-aos-once="true">
-	              </div>
-	              <div class="img-2">
-	                <img class="w-100" src="assets/image/home-6/png/retail-him.png" alt="" data-aos="fade-right" data-aos-duration="500" data-aos-once="true">
-	              </div>
-	            </div>
-	          </div>
-	        </div>
-	      </div>
-	    </div>
-	    <!-- End contentOne Area -->
-	    <!-- contentTwo Area -->
-	    <div class="pt-23 pt-md-25 pt-lg-33 pb-11 pb-md-14 pb-lg-33 overflow-hidden position-relative">
-	      <div class="container">
-	        <div class="row align-items-center justify-content-center justify-content-lg-start">
-	          <div class=" col-lg-5 col-md-4 col-xs-5">
-	            <div class="l6-content-image-group-3 mr-md-0 mr-lg-15 mr-xl-12">
-	              <div class="img-1">
-	                <img class="w-100" src="assets/image/home-6/png/square-blue.png" alt="" data-aos="fade-down" data-aos-duration="500" data-aos-delay="300" data-aos-once="true">
-	              </div>
-	              <div class="img-2">
-	                <img class="w-100" src="assets/image/home-6/png/supply.png" alt="" data-aos="fade-right" data-aos-duration="500" data-aos-once="true">
-	              </div>
-	            </div>
-	          </div>
-	          <div class="col-xl-6 col-lg-7 col-md-8 col-xs-10 ml-xl-19">
-	            <div class="pt-5 pb-7 pr-sm-5 pr-md-0 ml-md-10 ml-xl-0">
-	              <p class="font-size-7 mb-0 pr-lg-0 pr-xl-22" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true">HOW IT WORKS</p>
-	              <br>
-	              <h2 class="font-size-11 mb-9 pr-xs-10 pr-md-0" id="supplier-link" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">Register as a Brand owner.</h2>
-	                <p class="list font-size-7 mb-0" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true">Create a supplier account</p>
-	                <p class="list font-size-7 mb-0" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true">Share Product evidence </p>
-	                <p class="list font-size-7 mb-0" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true">Fix or set a budget.</p>
-	                <p class="list font-size-7 mb-0" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true">Get the product delivered to Sella warehouse.</p>            
-	              <div class="mt-13" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
-	                <a class="btn btn-dark-blue btn-3 rounded-5" href="{{url('signup/supplier')}}">Signup Now</a>
-	              </div>
-	            </div>
-	          </div>
-	        </div>
-	      </div>
-	    </div>
-	    <!-- End contentTwo Area -->
-
 		{{-- <!-- start form area -->
 		<div class="modal" id="email-modal">
 	      
@@ -385,7 +347,7 @@
 	                      <div class="single-client rounded-10 pt-7 pb-7 pt-sm-11 pt-md-11 pb-sm-10 pb-md-10 pl-7 pl-sm-11 pl-md-11 pr-7 pr-md-12 mx-md-6 focus-reset">
 	                      
 	                        <div class="d-flex align-items-center">
-	                          <img src="assets/image/home-6/png/client-1.png" class="black"  alt="">
+	                          <img src="{{asset('assets/image/home-6/png/client-1.png')}}" class="black"  alt="">
 	                        </div>
 	                      </div>
 	                  <!-- client 1 -->
@@ -393,7 +355,7 @@
 	                      <div class="single-client rounded-10 pt-7 pb-7 pt-sm-11 pt-md-11 pb-sm-10 pb-md-10 pl-7 pl-sm-11 pl-md-11 pr-7 pr-md-12 mx-md-6 focus-reset">
 	                      
 	                        <div class="d-flex align-items-center">
-	                          <img src="assets/image/home-6/png/client-2.png" class="black"  alt="">
+	                          <img src="{{asset('assets/image/home-6/png/client-2.png')}}" class="black"  alt="">
 	                        </div>
 	                      </div>
 	                  <!-- client 2 -->
@@ -401,7 +363,7 @@
 	                      <div class="single-client rounded-10 pt-7 pb-7 pt-sm-11 pt-md-11 pb-sm-10 pb-md-10 pl-7 pl-sm-11 pl-md-11 pr-7 pr-md-12 mx-md-6 focus-reset">
 	                      
 	                        <div class="d-flex align-items-center">
-	                          <img src="assets/image/home-6/png/client-3.png" class="black"  alt="">
+	                          <img src="{{asset('assets/image/home-6/png/client-3.png')}}" class="black"  alt="">
 	                        </div>
 	                      </div>
 	                  <!-- client 3 -->
@@ -409,7 +371,7 @@
 	                      <div class="single-client rounded-10 pt-7 pb-7 pt-sm-11 pt-md-11 pb-sm-10 pb-md-10 pl-7 pl-sm-11 pl-md-11 pr-7 pr-md-12 mx-md-6 focus-reset">
 	                      
 	                        <div class="d-flex align-items-center">
-	                          <img src="assets/image/home-6/png/client-4.png" class="black"  alt="">
+	                          <img src="{{asset('assets/image/home-6/png/client-4.png')}}" class="black"  alt="">
 	                        </div>
 	                      </div>
 	                  <!-- client 4 -->
@@ -417,7 +379,7 @@
 	                      <div class="single-client rounded-10 pt-7 pb-7 pt-sm-11 pt-md-11 pb-sm-10 pb-md-10 pl-7 pl-sm-11 pl-md-11 pr-7 pr-md-12 mx-md-6 focus-reset">
 	                      
 	                        <div class="d-flex align-items-center">
-	                          <img src="assets/image/home-6/png/client-5.png" class="black" alt="">
+	                          <img src="{{asset('assets/image/home-6/png/client-5.png')}}" class="black" alt="">
 	                        </div>
 	                      </div>
 	                  <!-- client 5 -->
@@ -425,7 +387,7 @@
 	                      <div class="single-client rounded-10 pt-7 pb-7 pt-sm-11 pt-md-11 pb-sm-10 pb-md-10 pl-7 pl-sm-11 pl-md-11 pr-7 pr-md-12 mx-md-6 focus-reset">
 	                      
 	                        <div class="d-flex align-items-center">
-	                          <img src="assets/image/home-6/png/client-6.png" class="black" alt="">
+	                          <img src="{{asset('assets/image/home-6/png/client-6.png')}}" class="black" alt="">
 	                        </div>
 	                      </div>
 	                  <!-- client 6 -->                              
@@ -547,42 +509,7 @@
 				                <img id="form-img" class="ml-sm-16 mt-xl-14" src="{{asset('images/sup-form.png')}}" alt="">              
 				            </div>
 				            <div class="col-md-8">
-				                <h2 class="mb-2 pr-lg-20 font-size-9 pt-22">Become a GetSella Supplier</h2>
-				                <p class="font-size-5">Have access to thousands of retailers.</p>              
-				                <form method="POST" onsubmit="return signupSupplier()">
-				                  	<div class="form-group">
-	          	                     	<label for="contact_name">Contact Name</label>
-	          	                     	<input type="text" id="contact_name" placeholder="Your Name" class="form-control" required>
-	          	                    </div> 
-	          	                    <div class="form-group">
-                                    	<label for="company">Company</label>
-                                    	<input type="text" id="company" placeholder="Your Company" class="form-control" required>
-                                    </div>  
-
-                                    <div class="form-group">
-                                    	<label for="contact_email">Contact Email</label>
-                                    	<input type="email" id="contact_email" placeholder="Business Email Address" class="form-control" required>
-                                    </div>
-
-                                    <div class="form-group">
-                                    	<label for="contact_phone">Contact Phone</label>
-                                    	<input type="tel" id="contact_phone" placeholder="Phone Number" class="form-control" required>
-                                    </div>
-
-                                    <div class="form-group">
-                                    	<label for="business_category">Business Category</label>
-                                    	<input type="text" id="business_category" class="form-control" placeholder="Eg. Fintech, eCommerce, Esport, Fashion etc..." name="">
-                                    </div>
-
-                                    <div class="form-group">
-                                    	<label for="contact_phone">Tell us about your business</label>
-                                    	<textarea class="form-control" id="about_business" placeholder="Type here..." style="resize: none;"></textarea>
-                                    </div>
-
-				                    <div class="form-group">
-				                    	<button class="btn-4 btn btn-sm btn-red rounded-4" type="submit"> Submit</button>
-				                    </div>
-				                </form>
+				                
 			                    <p class= "form-sen font-size-4 pt-30 pl-lg-35 pl-xs-8">Powered by <b>Xordium</b></p>
 				            </div>
 				      	</div>
@@ -591,22 +518,26 @@
 	      	</div>
 	  	</div>
 	  <!-- Vendor Scripts -->
-	  <script src="assets/js/vendor.min.js"></script>
+	  <script src="{{asset('assets/js/vendor.min.js')}}"></script>
 	  <!-- Plugin's Scripts -->
-	  <script src="assets/plugins/fancybox/jquery.fancybox.min.js"></script>
-	  <script src="assets/plugins/nice-select/jquery.nice-select.min.js"></script>
-	  <script src="assets/plugins/aos/aos.min.js"></script>
-	  <script src="assets/plugins/slick/slick.min.js"></script>
-	  <script src="assets/plugins/counter-up/jquery.counterup.min.js"></script>
-	  <script src="assets/plugins/counter-up/jquery.waypoints.min.js"></script>
+	  <script src="{{asset('assets/plugins/fancybox/jquery.fancybox.min.js')}}"></script>
+	  <script src="{{asset('assets/plugins/nice-select/jquery.nice-select.min.js')}}"></script>
+	  <script src="{{asset('assets/plugins/aos/aos.min.js')}}"></script>
+	  <script src="{{asset('assets/plugins/slick/slick.min.js')}}"></script>
+	  <script src="{{asset('assets/plugins/counter-up/jquery.counterup.min.js')}}"></script>
+	  <script src="{{asset('assets/plugins/counter-up/jquery.waypoints.min.js')}}"></script>
 	  <!-- Activation Script -->
-	  <script src="assets/js/custom.js"></script>
+	  <script src="{{asset('assets/js/custom.js')}}"></script>
 	  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+	  <script src="{{asset('js/database.js')}}"></script>
 	  <script type="text/javascript">
 
+	  	$(document).ready(function() {
+	  		loadBusinessCategories();
+	  	});
+
 	  	function showSignupModal() {
-	  		$("select").niceSelect();
 	  		$("#show-signup-modal").modal({
 	  			backdrop: false
 	  		});
@@ -653,6 +584,18 @@
 
 	  		// void
 	  		return false;
+	  	}
+
+	  	function loadBusinessCategories() {
+	  		$.each(business_categories, function(index, val) {
+	  			$("#business_category").append(`
+	  				<option value="${val}">${val}</option>
+	  			`);
+	  		});
+	  		$("#business_category").select2({
+	  			placeholder: 'Eg. Fintech, eCommerce, Esport, Fashion etc...',
+	  			width: 'resolve'
+	  		});
 	  	}
 	  </script>
 	</body>

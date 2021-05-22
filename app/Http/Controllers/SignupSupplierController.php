@@ -10,6 +10,16 @@ class SignupSupplierController extends Controller
 {
     /*
     |-----------------------------------------
+    | INDEX
+    |-----------------------------------------
+    */
+    public function index(Request $request){
+        // body
+        return view('signup');
+    }
+    
+    /*
+    |-----------------------------------------
     | SIGN UP SUPPLIER
     |-----------------------------------------
     */
