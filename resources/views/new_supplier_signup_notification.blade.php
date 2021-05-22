@@ -32,6 +32,20 @@ Kindly Follow up with the following information below.
 			<td width="160px;">Contact Mobile</td>
 			<td>{{ $data['phone'] }}</td>
 		</tr>
+		<tr>
+			<td width="160px;">Business Category</td>
+			<td>
+				<ul>
+					@foreach($data['business_category'] as $bc)
+						<li>{{ $bc }}</li>
+					@endforeach
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td width="160px;">About Business</td>
+			<td>{{ $data['about_business'] }}</td>
+		</tr>
 	</tbody>
 </table>
 
