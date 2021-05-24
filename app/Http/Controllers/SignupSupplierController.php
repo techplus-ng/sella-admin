@@ -39,7 +39,7 @@ class SignupSupplierController extends Controller
     	// body
     	$data = [
 	        'status' => 'success',
-	        'message' => 'Thanks for joining GetSella, We will contact you shortly!'
+	        'message' => 'Thank you for signing up, we will contact you shortly!'
 	    ];
 
 	    // return.
