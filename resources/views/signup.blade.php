@@ -139,7 +139,7 @@
 	          <!-- Hero Content -->
 	          <div class="col-lg-6 col-md-9 col-sm-11">
 	            <div class="mt-8 mt-lg-0 pr-md-11 pr-lg-0 pr-xl-10" data-aos="fade-left" data-aos-delay="500" data-aos-once="true">
-	              	<h2 class="font-size-9">Become a GetSella Supplier</h2>
+	              	<h2 class="font-size-9">Register your products on GetSella</h2>
 	                <p class="font-size-5">Have access to thousands of retailers.</p>              
 	                <form method="POST" onsubmit="return signupSupplier()">
 	                  	<div class="form-group">

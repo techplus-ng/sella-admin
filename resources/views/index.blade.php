@@ -547,7 +547,7 @@
 				                <img id="form-img" class="ml-sm-16 mt-xl-14" src="{{asset('images/sup-form.png')}}" alt="">              
 				            </div>
 				            <div class="col-md-8">
-				                <h2 class="mb-2 pr-lg-20 font-size-9 pt-22">Become a GetSella Supplier</h2>
+				                <h2 class="mb-2 pr-lg-20 font-size-9 pt-22">Register your products on GetSella</h2>
 				                <p class="font-size-5">Have access to thousands of retailers.</p>              
 				                <form method="POST" onsubmit="return signupSupplier()">
 				                  	<div class="form-group">
