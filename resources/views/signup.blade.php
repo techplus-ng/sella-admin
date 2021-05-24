@@ -419,10 +419,10 @@
 	                <h5 class="font-size-6 text-oxford-blue opacity-7 font-weight-normal mb-7 ml-lg-6" id="download"data-aos="fade-up" data-aos-duration="500" data-aos-once="true">Available on</h5>
 	                <div class="btn-group text-center text-sm-left d-sm-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
 	                  <div class="w-100  mb-3 mb-lg-0 mx-auto mx-sm-3 text-center">
-	                    <a href="#"><img class="min-w-210 max-h-64" src="assets/image/home-6/png/app-store.svg" alt="" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true"></a>
+	                    <a href="#"><img class="min-w-210 max-h-64" src="{{asset('assets/image/home-6/png/app-store.svg')}}" alt="" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true"></a>
 	                  </div> 
 	                  <div class="w-100 mb-3 mb-lg-0 mx-auto mx-xs-3">
-	                    <a href="https://play.google.com/store/apps/details?id=com.getsella.client"><img class="min-w-210 max-h-64" src="assets/image/home-6/png/play-store.svg" alt="" data-aos="fade-up" data-aos-delay="500" data-aos-duration="500" data-aos-once="true"></a>
+	                    <a href="https://play.google.com/store/apps/details?id=com.getsella.client"><img class="min-w-210 max-h-64" src="{{asset('assets/image/home-6/png/play-store.svg')}}" alt="" data-aos="fade-up" data-aos-delay="500" data-aos-duration="500" data-aos-once="true"></a>
 	                  </div>
 	                </div>
 	              </div>
@@ -441,8 +441,8 @@
 	              <div class="pr-xl-20 mb-11 mb-lg-0">
 	                <div class="brand-logo mb-3">
 	                  <a href="javascript:">
-	                    <img class="mx-auto mx-0 light-version-logo default-logo" src="assets/image/sella-logo.svg" alt="">
-	                    <img src="assets/image/sella-logo.svg" alt="" class="dark-version-logo mx-auto mx-0">
+	                    <img class="mx-auto mx-0 light-version-logo default-logo" src="{{asset('assets/image/sella-logo.svg')}}" alt="">
+	                    <img src="{{asset('assets/image/sella-logo.svg')}}" alt="" class="dark-version-logo mx-auto mx-0">
 	                  </a>
 	                </div>
 	                <p class="font-size-5 mb-0 text-default-color-2">

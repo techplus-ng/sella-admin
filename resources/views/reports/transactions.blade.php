@@ -42,6 +42,37 @@
     <div class="card-header">
       All transactions
     </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 small px-4 py-4">
+          <h3 class="text-success small">Transactions from (<b>{{ $start_date }}</b> till <b>{{ $end_date }}</b>)</h3>
+          <form method="GET" action="">
+              <div class="row">
+                  <div class="col-md-5">
+                      <div class="form-group">
+                          <label for="start_date">Start Date</label>
+                          <input type="date" onchange="refereshDate()" class="form-control" value="{{ $start_date }}" id="start_date" name="start_date">
+                      </div>
+                  </div>
+                  <div class="col-md-5">
+                      <div class="form-group">
+                          <label for="end_date">End Date</label>
+                          <input type="date" onchange="refereshDate()" class="form-control" value="{{ $end_date }}" id="end_date" name="end_date">
+                      </div>
+                  </div>
+                  <div class="col-md-2">
+                      <div class="form-group">
+                          <label for="end_date" style="opacity: 0;">Fetch</label>
+                          <button class="btn primary-info col-md-12">
+                              Fetch
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <div class="card-body">
       <table class="table small" id="datatable">
         <thead>
@@ -97,8 +128,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
   <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script>
+  <script src="https://momentjs.com/downloads/moment.min.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
+      // initDefaultDate();
+
       $('#datatable').DataTable( {
         dom: 'Bfrtip',
         buttons: [
@@ -109,6 +143,21 @@
         ]
       });
     });
+
+    function initDefaultDate() {
+        dateTo = moment().format('YYYY-MM-DD');
+        dateFrom = moment().subtract(7,'d').format('YYYY-MM-DD');
+
+        $("#start_date").val(dateFrom);
+        $("#end_date").val(dateTo);
+        $("#date-preview").html(`(<i><b>${dateFrom}</b></i>) to <i>(<b>${dateTo}</b></i>)`);
+    }
+
+    function refereshDate() {
+        // var start_date = $("#start_date").val();
+        // var end_date = $("#end_date").val();
+        // $("#date-preview").html(`(<i><b>${start_date}</b></i>) to <i>(<b>${end_date}</b></i>)`);
+    }
   </script>
 @endpush
 

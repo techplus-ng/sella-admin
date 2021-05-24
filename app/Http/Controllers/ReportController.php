@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 use App\Order;
 use DB;
 
@@ -55,9 +56,13 @@ class ReportController extends Controller
     */
     public function transactions(Request $request){
     	// body
+        $date = new Carbon();
+        $last_7_days = $date->subDays(7)->format("Y-m-d");
 
-    	$orders = DB::select("select * from `product_orders`");
+        $start_date = $request->start_date ?? $last_7_days;
+        $end_date = $request->end_date ?? date("Y-m-d");
 
+    	$orders = DB::select("select * from `product_orders` where created_at >= '$start_date' and created_at <= '$end_date'");
     	$order_box = [];
     	foreach ($orders as $key => $value) {
     		# code...
@@ -78,7 +83,7 @@ class ReportController extends Controller
     		array_push($order_box, $value);
     	}
 
-    	return view('reports.transactions', compact('order_box'));
+    	return view('reports.transactions', compact('order_box', 'start_date', 'end_date'));
     }
     
     /*
