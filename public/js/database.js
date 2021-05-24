@@ -50,3 +50,9 @@ var business_categories = [
 	'Truck Transportation(Fuel)',
 	'Truck Transportation(Non Fuel)'
 ];
+
+var brand_categories = [
+	"Brand Owner",
+	"Manufacturer",
+	"Distributor"
+];

@@ -587,7 +587,7 @@
 	  	}
 
 	  	function loadBusinessCategories() {
-	  		$.each(business_categories, function(index, val) {
+	  		$.each(brand_categories, function(index, val) {
 	  			$("#business_category").append(`
 	  				<option value="${val}">${val}</option>
 	  			`);
