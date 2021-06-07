@@ -76,7 +76,7 @@ function getRawDateColumn($modelObject, $attributeName = 'updated_at')
     // $replace = preg_replace('/\$\{date\}/', $dateObj->format("l jS F Y (h:i:s)"), $html);
     // $replace = preg_replace('/\$\{dateHuman\}/', $dateObj->diffForHumans(), $replace);
     // return "<span class='small'>".$dateObj->format("D, jS F")."</span>";
-    return "<span class='small'>".$dateObj->format("D, jS F")."</span>";
+    return "<span class='small'>".$dateObj->format("D, jS F")." <br /> ".date("Y-m-d")."</span>";
 }
 
 function getPriceColumn($modelObject, $attributeName = 'price')
