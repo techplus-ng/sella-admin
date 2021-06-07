@@ -29,6 +29,9 @@ class UserDataTable extends DataTable
             ->editColumn('updated_at', function ($user) {
                 return getDateColumn($user, 'updated_at');
             })
+            ->editColumn('created_at', function ($user) {
+                return getRawDateColumn($user, 'created_at');
+            })
             ->editColumn('role', function ($user) {
                 return getArrayColumn($user->roles,'name');
             })
@@ -107,6 +110,11 @@ class UserDataTable extends DataTable
             [
                 'data' => 'updated_at',
                 'title' => trans('lang.user_updated_at'),
+                'searchable' => false,
+            ],
+            [
+                'data' => 'created_at',
+                'title' => trans('lang.user_created_at'),
                 'searchable' => false,
             ]
         ];

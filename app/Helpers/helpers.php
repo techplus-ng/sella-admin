@@ -62,6 +62,23 @@ function getDateColumn($modelObject, $attributeName = 'updated_at')
     return $replace;
 }
 
+function getRawDateColumn($modelObject, $attributeName = 'updated_at')
+{
+    // if (setting('is_human_date_format', false)) {
+    //     $html = '<p data-toggle="tooltip" data-placement="bottom" title="${date}">${dateHuman}</p>';
+    // } else {
+    //     $html = '<p data-toggle="tooltip" data-placement="bottom" title="${dateHuman}">${date}</p>';
+    // }
+    if (!isset($modelObject[$attributeName])) {
+        return '';
+    }
+    $dateObj = new Carbon\Carbon($modelObject[$attributeName]);
+    // $replace = preg_replace('/\$\{date\}/', $dateObj->format("l jS F Y (h:i:s)"), $html);
+    // $replace = preg_replace('/\$\{dateHuman\}/', $dateObj->diffForHumans(), $replace);
+    // return "<span class='small'>".$dateObj->format("D, jS F")."</span>";
+    return "<span class='small'>".$dateObj->format("D, jS F")."</span>";
+}
+
 function getPriceColumn($modelObject, $attributeName = 'price')
 {
 
