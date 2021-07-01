@@ -41,7 +41,7 @@ class OrderDataTable extends DataTable
                 return getDateColumn($order, 'updated_at');
             })
             ->editColumn('created_at', function ($order) {
-                return getDateColumn($order, 'created_at');
+                return getRawDateColumn($order, 'created_at');
             })
             ->editColumn('delivery_fee', function ($order) {
                 return getPriceColumn($order, 'delivery_fee');
@@ -124,7 +124,7 @@ class OrderDataTable extends DataTable
             ],
             [
                 'data' => 'created_at',
-                'title' => trans('lang.order_created_at'),
+                'title' => 'Created At',
                 'searchable' => false,
                 'orderable' => true,
 
