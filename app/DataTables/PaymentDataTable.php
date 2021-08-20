@@ -37,6 +37,9 @@ class PaymentDataTable extends DataTable
             ->editColumn('updated_at', function ($payment) {
                 return getDateColumn($payment, 'updated_at');
             })
+            ->editColumn('created_at', function ($payment) {
+                return getRawDateColumn($payment, 'created_at');
+            })
             ->editColumn('price', function ($payment) {
                 return getPriceColumn($payment);
             })
@@ -130,6 +133,11 @@ class PaymentDataTable extends DataTable
             [
                 'data' => 'updated_at',
                 'title' => trans('lang.payment_updated_at'),
+                'searchable' => false,
+            ],
+            [
+                'data' => 'created_at',
+                'title' => trans('lang.payment_created_at'),
                 'searchable' => false,
             ]
         ];

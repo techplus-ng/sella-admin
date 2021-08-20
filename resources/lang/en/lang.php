@@ -745,6 +745,7 @@ return [
     'payment_status_placeholder' => 'Insert Payment Status',
     'payment_table' => 'Payments List',
     'payment_updated_at' => 'Updated At',
+    'payment_created_at' => 'Created At',
     'payment_user_id' => 'User',
     'permission' => 'Permission',
     'permission_class' => 'Permission Class',
