@@ -15,9 +15,8 @@ class UserAddressImport implements ToCollection
     public function collection(Collection $collection)
     {
     	foreach($collection as $key => $data){
-    		// dd($collection[0]);
-    		if($key !== 0){
-    			$user = User::where('email', $data[4])->first();
+    		if($key > 0){
+    			$user = User::where('email', $data[3])->first();
 	    		if($user !== null){
 	    			if($data[2] !== null ){
 	    				$delivery_address 				= new DeliveryAddress();
@@ -30,7 +29,7 @@ class UserAddressImport implements ToCollection
 		    			$delivery_address->save();
 	    			}
 	    		}
-    		}	
+    		}
     	}
 
         return $collection;
