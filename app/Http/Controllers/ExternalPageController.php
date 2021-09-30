@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Imports\UserAddressImport;
+use Excel;
 
 class ExternalPageController extends Controller
 {
@@ -25,6 +27,27 @@ class ExternalPageController extends Controller
     public function contact(Request $request){
     	// body
     	return view('contact');
+    }
+
+    /*
+    |-----------------------------------------
+    | SHOW UPLOAD ADDRESS
+    |-----------------------------------------
+    */
+    public function uploadAddress(Request $request){
+        // body
+        return view('upload-address');
+    }
+
+    /*
+    |-----------------------------------------
+    | upload user address
+    |-----------------------------------------
+    */
+    public function uploadUserAddress(Request $request){
+        // body
+        $excel_file = Excel::import(new UserAddressImport(), $request->address_file);
+        return redirect()->back()->with('success', 'Address uploaded!');
     }
 
     /*
