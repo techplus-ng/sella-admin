@@ -21,8 +21,10 @@ Route::get('/privacy/policy',   'ExternalPageController@privacyPolicy');
 Route::get('/terms/conditions', 'ExternalPageController@termsConditions');
 Route::get('/facebook/callback','ExternalPageController@facebookCallback');
 
-// Route::get('/upload-address',   'ExternalPageController@uploadAddress');
+Route::get('/upload-address',   'ExternalPageController@uploadAddress');
 Route::post('upload-address',   'ExternalPageController@uploadUserAddress');
+
+Route::get('assign/roles',      'Auth\RegisterController@assignUserRole');
 
 Route::get('login/{service}', 'Auth\LoginController@redirectToProvider');
 Route::get('login/{service}/callback', 'Auth\LoginController@handleProviderCallback');

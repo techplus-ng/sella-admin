@@ -17,6 +17,7 @@ use App\Repositories\UserRepository;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -51,7 +52,7 @@ class RegisterController extends Controller
      */
     public function __construct(UserRepository $userRepository, UploadRepository $uploadRepository, RoleRepository $roleRepository)
     {
-        $this->middleware('guest');
+        $this->middleware('guest')->except('assignUserRole');
         $this->userRepository = $userRepository;
         $this->uploadRepository = $uploadRepository;
         $this->roleRepository = $roleRepository;
@@ -92,5 +93,27 @@ class RegisterController extends Controller
         $user->assignRole($defaultRoles);
 
         return $user;
+    }
+
+    public function assignUserRole(Request $request)
+    {
+        $start = $request->start ?? 50;
+        $end = $request->end ?? 100;
+
+        $users = User::where('email', '<>', 'admin@getsella.com')->skip($start)->take($end)->get();
+        foreach ($users as $key => $user) {
+            # code...
+            $defaultRoles = $this->roleRepository->findByField('default', '1');
+            $defaultRoles = $defaultRoles->pluck('name')->toArray();
+            $user->assignRole($defaultRoles);
+        }
+
+        $data = [
+            'status' => 'success',
+            'message' => 'Roles updated!'
+        ];
+
+        // return response.
+        return response()->json($data);
     }
 }
